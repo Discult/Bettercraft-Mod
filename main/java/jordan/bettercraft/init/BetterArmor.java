@@ -21,13 +21,6 @@ public class BetterArmor
 	public static void init()
 	{
 		STEEL_HELMET = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 1, EntityEquipmentSlot.HEAD), "steel_helmet").setUnlocalizedName("steel_helmet").setCreativeTab(BetterTabs.tabBetterCombat);
-
-
-		
-		STEEL_BOOTS = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 1, EntityEquipmentSlot.HEAD), "steel_boots").setUnlocalizedName("steel_boots").setCreativeTab(BetterTabs.tabBetterCombat);
-
-		
-
 		STEEL_CHESTPLATE = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 1, EntityEquipmentSlot.CHEST), "steel_chestplate").setUnlocalizedName("steel_chestplate").setCreativeTab(BetterTabs.tabBetterCombat);
 		STEEL_LEGGINGS = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 2, EntityEquipmentSlot.LEGS), "steel_leggings").setUnlocalizedName("steel_leggings").setCreativeTab(BetterTabs.tabBetterCombat);
 		STEEL_BOOTS = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 1, EntityEquipmentSlot.FEET), "steel_boots").setUnlocalizedName("steel_boots").setCreativeTab(BetterTabs.tabBetterCombat);

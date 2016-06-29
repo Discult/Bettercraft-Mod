@@ -159,6 +159,40 @@ public class BetterRecipes
 				'S', BetterItems.STEEL_INGOT
 		});
 		//Steel Stuff End
+		//Food
+		GameRegistry.addRecipe(new ItemStack(BetterFoods.BACON), new Object[] {
+				" B ",
+				" S ",
+				
+				'B', BetterItems.SALT, 'S', Items.PORKCHOP
+				
+		});
+		GameRegistry.addRecipe(new ItemStack(BetterFoods.BLT), new Object[] {
+				" B ",
+				" L ",
+				" T ",
+				'B', BetterFoods.BACON, 'L', BetterFoods.LETTUCE, 'T', BetterFoods.TOMATO
+				
+		});
+		GameRegistry.addRecipe(new ItemStack(BetterItems.SALT), new Object[] {
+				" C ",
+				'C', Items.WATER_BUCKET, 
+				
+		});
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 	

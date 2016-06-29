@@ -17,16 +17,31 @@ public class BetterFoods
 {
 	public static Item STRAWBERRY;
 	public static Item SWEET_CORN_RAW;
-	
+	public static Item BACON;
+	public static Item BLT;
+	public static Item LETTUCE;
+	public static Item TOMATO;
 	public static void init()
 	{
 		STRAWBERRY = registerItem(new ItemFood(2, 3.0F, false), "strawberry").setUnlocalizedName("strawberry").setCreativeTab(BetterTabs.tabBetterFood);
 		SWEET_CORN_RAW = registerItem(new ItemFood(1, 1.0F, false), "sweet_corn_raw").setUnlocalizedName("sweet_corn_raw").setCreativeTab(BetterTabs.tabBetterFood);
+		BACON = registerItem(new ItemFood(1, 1.0f, false), "bacon").setUnlocalizedName("bacon").setCreativeTab(BetterTabs.tabBetterFood);
+		BLT = registerItem(new ItemFood(8, 4f, false), "BLT").setUnlocalizedName("BLT").setCreativeTab(BetterTabs.tabBetterFood);
+		LETTUCE = registerItem(new ItemFood(1, 1.0F, false), "lettuce").setUnlocalizedName("lettuce").setCreativeTab(BetterTabs.tabBetterFood);
+		TOMATO = registerItem(new ItemFood(1, 1.0F, false), "tomato").setUnlocalizedName("tomato").setCreativeTab(BetterTabs.tabBetterFood);
+	
+	
 	}
 	public static void registerRenders()
 	{
 		registerRender(STRAWBERRY);
 		registerRender(SWEET_CORN_RAW);
+		registerRender(BACON);
+		registerRender(BLT);
+		registerRender(LETTUCE);
+		registerRender(TOMATO);
+		
+		
 	}
 	
 	public static void registerRender(Item item)

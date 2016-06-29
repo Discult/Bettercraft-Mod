@@ -17,6 +17,7 @@ public class BetterItems
 	public static Item DRAGON_SCALE;
 	public static Item STEEL_INGOT;
 	public static Item SWIFT_ITEM;
+	public static Item SALT;
 	
 	public static void init()
 	{
@@ -26,6 +27,7 @@ public class BetterItems
 		DRAGON_SCALE = registerItem(new Item(), "dragon_scale").setUnlocalizedName("dragon_scale").setCreativeTab(BetterTabs.tabBetterMaterials);
 		STEEL_INGOT = registerItem(new Item(), "steel_ingot").setUnlocalizedName("steel_ingot").setCreativeTab(BetterTabs.tabBetterMaterials);
 		SWIFT_ITEM = registerItem(new ItemSwift(), "swift_item").setUnlocalizedName("swift_item").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
+		SALT = registerItem(new Item(), "salt").setUnlocalizedName("salt").setCreativeTab(BetterTabs.tabBetterMaterials);
 	}
 	public static void registerRenders()
 	{
@@ -35,6 +37,7 @@ public class BetterItems
 		registerRender(DRAGON_SCALE);
 		registerRender(STEEL_INGOT);
 		registerRender(SWIFT_ITEM);
+		registerRender(SALT);
 	}
 	
 	public static void registerRender(Item item)
