@@ -20,15 +20,15 @@ public class ItemSwift extends Item
 		setMaxDamage(9);
 	}
 	
-	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand, PlayerInteractEvent event) 
+	@Override
+	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) 
 	{
 		
-		
 		playerIn.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation("speed"), 200));
-		//worldIn.createExplosion(playerIn, playerIn.posX, playerIn.posY, playerIn.posZ, 4.0F, true);
 		
 		itemStackIn.damageItem(1, playerIn);
 		
 		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemStackIn);
 	}
+	
 }
