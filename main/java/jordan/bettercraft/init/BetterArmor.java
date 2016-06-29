@@ -21,15 +21,12 @@ public class BetterArmor
 	public static void init()
 	{
 		STEEL_HELMET = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 1, EntityEquipmentSlot.HEAD), "steel_helmet").setUnlocalizedName("steel_helmet").setCreativeTab(BetterTabs.tabBetterCombat);
-<<<<<<< HEAD
+
 		STEEL_CHESTPIECE = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 1, EntityEquipmentSlot.HEAD), "steel_chestpiece").setUnlocalizedName("steel_chestpiece").setCreativeTab(BetterTabs.tabBetterCombat);
 		STEEL_PANTS = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 2, EntityEquipmentSlot.HEAD), "steel_pants").setUnlocalizedName("steel_pants").setCreativeTab(BetterTabs.tabBetterCombat);
 		STEEL_BOOTS = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 1, EntityEquipmentSlot.HEAD), "steel_boots").setUnlocalizedName("steel_boots").setCreativeTab(BetterTabs.tabBetterCombat);
-=======
-		STEEL_CHESTPIECE = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 1, EntityEquipmentSlot.CHEST), "steel_chestpiece").setUnlocalizedName("steel_chestpiece").setCreativeTab(BetterTabs.tabBetterCombat);
-		STEEL_PANTS = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 2, EntityEquipmentSlot.LEGS), "steel_pants").setUnlocalizedName("steel_pants").setCreativeTab(BetterTabs.tabBetterCombat);
-		STEEL_BOOTS = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 1, EntityEquipmentSlot.FEET), "steel_boots").setUnlocalizedName("steel_boots").setCreativeTab(BetterTabs.tabBetterCombat);
->>>>>>> master
+
+		
 	}
 	public static void registerRenders()
 	{	
