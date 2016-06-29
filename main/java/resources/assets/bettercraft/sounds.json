@@ -1,0 +1,10 @@
+{
+"mummy.ambient": {
+	"category": "record",
+	"sounds": [
+	{
+		"name": "bettercraft:sounds/mummy/mummy_ambient","stream":false
+	}
+	]
+}
+}

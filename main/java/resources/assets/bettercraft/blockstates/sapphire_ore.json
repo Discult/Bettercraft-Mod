@@ -1,0 +1,9 @@
+{  "forge_marker": 1,
+  "defaults": {
+    "model": "bettercraft:sapphire_ore"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}

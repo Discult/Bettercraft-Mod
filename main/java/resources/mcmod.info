@@ -1,0 +1,16 @@
+[
+{
+  "modid": "bettercraft",
+  "name": "Discult's Bettercraft Mod",
+  "description": "Bettercraft is a mod that will bring pride and joy!!!!!!!",
+  "version": "1.9.4-R2",
+  "mcversion": "1.9.4",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["DiscultGA"],
+  "credits": "All the people who have supported me!!!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

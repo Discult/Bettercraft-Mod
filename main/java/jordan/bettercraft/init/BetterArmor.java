@@ -14,12 +14,10 @@ public class BetterArmor
 {
 	
 	public static Item STEEL_HELMET;
-	public static Item STEEL_CHESTPIECE;
 	
 	public static void init()
 	{
 		STEEL_HELMET = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 1, EntityEquipmentSlot.HEAD), "steel_helmet").setUnlocalizedName("steel_helmet").setCreativeTab(BetterTabs.tabBetterCombat);
-		STEEL_CHESTPIECE = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 1, EntityEquipmentSlot.HEAD), "steel_chestpiece").setUnlocalizedName("steel_chestpiece").setCreativeTab(BetterTabs.tabBetterCombat);
 	}
 	public static void registerRenders()
 	{	
