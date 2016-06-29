@@ -151,11 +151,21 @@ public class BetterRecipes
 		});
 		//CopperStuffEnd
 		
+		//Steel Stuff
+		GameRegistry.addRecipe(new ItemStack(BetterArmor.STEEL_HELMET), new Object[]{
+				"SSS",
+				"S S",
+				"   ",
+				'S', BetterItems.STEEL_INGOT
+		});
+		//Steel Stuff End
+		
 	}
 	
 	public static void smelting()
 	{
 		GameRegistry.addSmelting(BetterBlocks.COPPER_ORE, new ItemStack(BetterItems.COPPER_INGOT), 2);
+		GameRegistry.addSmelting(Items.IRON_INGOT, new ItemStack(BetterItems.STEEL_INGOT), 3);
 	}
 	
 }
