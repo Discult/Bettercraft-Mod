@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "bettercraft:lit_quartz_furnace" },
-        "facing=south": { "model": "bettercraft:lit_quartz_furnace", "y": 180 },
-        "facing=west":  { "model": "bettercraft:lit_quartz_furnace", "y": 270 },
-        "facing=east":  { "model": "bettercraft:lit_quartz_furnace", "y": 90 }
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "parent": "block/orientable",
-    "textures": {
-        "top": "bettercraft:blocks/quartz_furnace_top",
-        "front": "bettercraft:blocks/quartz_furnace_front_off",
-        "side": "bettercraft:blocks/quartz_furnace_side"
-    }
-}

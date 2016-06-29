@@ -1,6 +1,0 @@
-{
-    "parent": "block/crop",
-    "textures": {
-        "crop": "bettercraft:blocks/sweetcorn_stage_0"
-    }
-}
