@@ -14,15 +14,24 @@ public class BetterArmor
 {
 	
 	public static Item STEEL_HELMET;
+	public static Item STEEL_CHESTPIECE;
+	public static Item STEEL_PANTS;
+	public static Item STEEL_BOOTS;
 	
 	public static void init()
 	{
 		STEEL_HELMET = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 1, EntityEquipmentSlot.HEAD), "steel_helmet").setUnlocalizedName("steel_helmet").setCreativeTab(BetterTabs.tabBetterCombat);
+		STEEL_CHESTPIECE = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 1, EntityEquipmentSlot.HEAD), "steel_chestpiece").setUnlocalizedName("steel_chestpiece").setCreativeTab(BetterTabs.tabBetterCombat);
+		STEEL_PANTS = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 2, EntityEquipmentSlot.HEAD), "steel_pants").setUnlocalizedName("steel_pants").setCreativeTab(BetterTabs.tabBetterCombat);
+		STEEL_BOOTS = registerItem(new ItemArmor(BetterArmorMaterial.STEEL, 1, EntityEquipmentSlot.HEAD), "steel_boots").setUnlocalizedName("steel_boots").setCreativeTab(BetterTabs.tabBetterCombat);
 	}
 	public static void registerRenders()
 	{	
 		//steel
 		registerRender(STEEL_HELMET);
+		registerRender(STEEL_CHESTPIECE);
+		registerRender(STEEL_PANTS);
+		registerRender(STEEL_BOOTS);
 	}
 	
 	public static void registerRender(Item item)
