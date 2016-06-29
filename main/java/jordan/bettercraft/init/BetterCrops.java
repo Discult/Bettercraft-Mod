@@ -40,6 +40,8 @@ public class BetterCrops
 	{
 		registerRender(STRAWBERRY_PLANT);
 		registerRender(SWEET_CORN_PLANT);
+		registerRender(LETTUCE_PLANT);
+		registerRender(TOMATO_PLANT);
 	}
 	
 	public static void registerRender(Block block)
