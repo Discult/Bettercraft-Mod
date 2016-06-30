@@ -1,5 +1,6 @@
 package jordan.bettercraft.init;
 
+import jordan.bettercraft.init.blocks.Altar;
 import jordan.bettercraft.init.blocks.CustomBlock;
 import jordan.bettercraft.init.blocks.Rock;
 import jordan.bettercraft.init.blocks.ores.CopperOre;
@@ -22,9 +23,8 @@ public class BetterBlocks
 	public static Block RUBY_ORE;
 	public static Block SAPPHIRE_ORE;
 	public static Block COPPER_ORE;
-	
+	public static Block ALTAR;
 	public static Block CUSTOM_BLOCK;
-	
 	
 	public static void init()
 	{
@@ -40,6 +40,9 @@ public class BetterBlocks
 		CUSTOM_BLOCK = new CustomBlock();
 		CUSTOM_BLOCK.setUnlocalizedName("custom_block");
 		
+		ALTAR = new Altar();
+		ALTAR.setUnlocalizedName("altar");
+		
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -49,6 +52,7 @@ public class BetterBlocks
 		registerRender(SAPPHIRE_ORE);
 		registerRender(COPPER_ORE);
 		registerRender(CUSTOM_BLOCK);
+		registerRender(ALTAR);
 		
 	}
 	

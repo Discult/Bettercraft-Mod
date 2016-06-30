@@ -28,17 +28,6 @@ public class ClientProxy extends CommonProxy
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		super.preInit(event);
-		BetterItems.init();
-		BetterBlocks.init();
-		BetterTools.init();
-		BetterWeapons.init();
-		BetterCrops.init();
-		BetterSeeds.init();
-		BetterFoods.init();
-		BetterArmor.init();
-		BetterSoundEvents.registerSounds();
-		
-		MinecraftForge.EVENT_BUS.register((Object)new MobDropsHandler());
 		
 		OBJLoader.INSTANCE.addDomain(Reference.MODID);
 
