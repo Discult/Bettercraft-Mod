@@ -1,6 +1,7 @@
 package jordan.bettercraft.init;
 
 import jordan.bettercraft.init.items.potionitems.ItemSwift;
+import jordan.bettercraft.init.items.potionitems.ItemTome;
 import jordan.bettercraft.main.Reference;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -18,6 +19,7 @@ public class BetterItems
 	public static Item STEEL_INGOT;
 	public static Item SWIFT_ITEM;
 	public static Item SALT;
+	public static Item TOME;
 	
 	public static void init()
 	{
@@ -27,6 +29,7 @@ public class BetterItems
 		DRAGON_SCALE = registerItem(new Item(), "dragon_scale").setUnlocalizedName("dragon_scale").setCreativeTab(BetterTabs.tabBetterMaterials);
 		STEEL_INGOT = registerItem(new Item(), "steel_ingot").setUnlocalizedName("steel_ingot").setCreativeTab(BetterTabs.tabBetterMaterials);
 		SWIFT_ITEM = registerItem(new ItemSwift(), "swift_item").setUnlocalizedName("swift_item").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
+		TOME = registerItem( new ItemTome(), "tome_item").setUnlocalizedName("tome_item").setCreativeTab(BetterTabs.tabBetterMaterials);
 		SALT = registerItem(new Item(), "salt").setUnlocalizedName("salt").setCreativeTab(BetterTabs.tabBetterMaterials);
 	}
 	public static void registerRenders()
@@ -38,6 +41,7 @@ public class BetterItems
 		registerRender(STEEL_INGOT);
 		registerRender(SWIFT_ITEM);
 		registerRender(SALT);
+		registerRender(TOME);
 	}
 	
 	public static void registerRender(Item item)
