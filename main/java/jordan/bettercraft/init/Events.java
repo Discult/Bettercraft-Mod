@@ -11,9 +11,10 @@ public class Events {
 	public void onEventRightClickBlock(RightClickBlock event){
 		if(event.getItemStack() != null && event.getWorld().getBlockState(event.getPos()).getBlock() != null){
 			if(event.getWorld().getBlockState(event.getPos()).getBlock().equals(BetterBlocks.ALTAR)
-					&& event.getItemStack().getItem().equals(Items.SUGAR)){
-				
-				event.getEntityPlayer().setHeldItem(event.getHand(), new ItemStack(BetterItems.SWIFT_ITEM));;
+					&& event.getItemStack().getItem().equals(Items.SUGAR ) && event.getEntityPlayer().inventory.hasItemStack(new ItemStack(Items.DIAMOND))){
+				event.getEntityPlayer().inventory.clearMatchingItems(Items.DIAMOND, 0, 1, null);
+				event.getEntityPlayer().inventory.clearMatchingItems(Items.SUGAR, 0, 1, null);
+				event.getEntityPlayer().inventory.addItemStackToInventory(new ItemStack(BetterItems.SWIFT_ITEM));
 			}
 		}
 	}
