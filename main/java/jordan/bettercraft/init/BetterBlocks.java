@@ -2,7 +2,6 @@ package jordan.bettercraft.init;
 
 import jordan.bettercraft.init.blocks.Altar;
 import jordan.bettercraft.init.blocks.CustomBlock;
-import jordan.bettercraft.init.blocks.Rock;
 import jordan.bettercraft.init.blocks.ores.CopperOre;
 import jordan.bettercraft.init.blocks.ores.RubyOre;
 import jordan.bettercraft.init.blocks.ores.SapphireOre;

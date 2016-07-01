@@ -1,6 +1,11 @@
 package jordan.bettercraft.init.items.potionitems;
 
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.world.World;
 public class ItemTome extends Item 
 	{
 		public ItemTome()
