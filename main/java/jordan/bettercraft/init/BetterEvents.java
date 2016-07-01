@@ -9,7 +9,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickBlock;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickItem;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class BetterEvents {
@@ -23,10 +25,12 @@ public class BetterEvents {
 				event.getEntityPlayer().inventory.clearMatchingItems(Items.SUGAR, 0, 1, null);
 				event.getEntityPlayer().inventory.clearMatchingItems(BetterItems.CATALYST, 0, 1, null);
 				event.getEntityPlayer().inventory.addItemStackToInventory(new ItemStack(BetterItems.SWIFT_ITEM));
+
 			}
 
 		}
 	}
+
 	@SubscribeEvent
 	public void catCrafting(RightClickBlock event) {
 		if (event.getItemStack() != null && event.getWorld().getBlockState(event.getPos()).getBlock() != null) {
@@ -39,12 +43,17 @@ public class BetterEvents {
 		}
 
 	}
-	
-	
-	
-	
-	
-	
-	
-}
 
+	@SubscribeEvent
+	public void FlightRing(RightClickItem event) {
+		if (event.getItemStack() != null) {
+			if (event.getEntityPlayer().capabilities.allowFlying = false)
+				if (event.getItemStack().equals(new ItemStack(BetterItems.FLYING_RING))) {
+					event.getEntityPlayer().capabilities.allowFlying = false;
+				} else {
+					event.getEntityPlayer().capabilities.allowFlying = true;
+				}
+		}
+	}
+
+}
