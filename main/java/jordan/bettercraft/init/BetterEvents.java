@@ -47,13 +47,14 @@ public class BetterEvents {
 	@SubscribeEvent
 	public void FlightRing(RightClickItem event) {
 		if (event.getItemStack() != null) {
-			if (event.getEntityPlayer().capabilities.allowFlying = false)
-				if (event.getItemStack().equals(new ItemStack(BetterItems.FLYING_RING))) {
-					event.getEntityPlayer().capabilities.allowFlying = false;
-				} else {
+			if (event.getItemStack().equals(new ItemStack(BetterItems.FLYING_RING))) {
+				if (event.getEntityPlayer().capabilities.allowFlying = false) {
 					event.getEntityPlayer().capabilities.allowFlying = true;
+				}else{
+					event.getEntityPlayer().capabilities.allowFlying = false;
 				}
+
+			}
 		}
 	}
-
 }
