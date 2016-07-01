@@ -20,7 +20,6 @@ public class BetterItems
 	public static Item SWIFT_ITEM;
 	public static Item SALT;
 	public static Item TOME;
-	public static Item CATALYST;
 	
 	public static void init()
 	{
@@ -32,7 +31,6 @@ public class BetterItems
 		SWIFT_ITEM = registerItem(new ItemSwift(), "swift_item").setUnlocalizedName("swift_item").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
 		TOME = registerItem(new ItemTome(), "tome_item").setUnlocalizedName("tome_item").setCreativeTab(BetterTabs.tabBetterMaterials);
 		SALT = registerItem(new Item(), "salt").setUnlocalizedName("salt").setCreativeTab(BetterTabs.tabBetterMaterials);
-		CATALYST = registerItem(new Item(), "catalyst").setUnlocalizedName("catalyst").setCreativeTab(BetterTabs.tabBetterMaterials);
 	}
 	public static void registerRenders()
 	{
@@ -44,7 +42,6 @@ public class BetterItems
 		registerRender(SWIFT_ITEM);
 		registerRender(SALT);
 		registerRender(TOME);
-		registerRender(CATALYST);
 	}
 	
 	public static void registerRender(Item item)
