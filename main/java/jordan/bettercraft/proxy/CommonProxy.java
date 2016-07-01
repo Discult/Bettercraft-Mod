@@ -9,7 +9,7 @@ import jordan.bettercraft.init.BetterSeeds;
 import jordan.bettercraft.init.BetterSoundEvents;
 import jordan.bettercraft.init.BetterTools;
 import jordan.bettercraft.init.BetterWeapons;
-import jordan.bettercraft.init.Events;
+import jordan.bettercraft.init.BetterEvents;
 import jordan.bettercraft.init.MobDropsHandler;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,7 +30,7 @@ public class CommonProxy
 		BetterFoods.init();
 		BetterArmor.init();
 		BetterSoundEvents.registerSounds();
-		MinecraftForge.EVENT_BUS.register(new Events());
+		MinecraftForge.EVENT_BUS.register(new BetterEvents());
 		MinecraftForge.EVENT_BUS.register((Object)new MobDropsHandler());
 		
 	}

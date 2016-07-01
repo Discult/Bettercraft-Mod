@@ -29,7 +29,7 @@ public class BetterItems
 		DRAGON_SCALE = registerItem(new Item(), "dragon_scale").setUnlocalizedName("dragon_scale").setCreativeTab(BetterTabs.tabBetterMaterials);
 		STEEL_INGOT = registerItem(new Item(), "steel_ingot").setUnlocalizedName("steel_ingot").setCreativeTab(BetterTabs.tabBetterMaterials);
 		SWIFT_ITEM = registerItem(new ItemSwift(), "swift_item").setUnlocalizedName("swift_item").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
-		TOME = registerItem( new ItemTome(), "tome_item").setUnlocalizedName("tome_item").setCreativeTab(BetterTabs.tabBetterMaterials);
+		TOME = registerItem(new ItemTome(), "tome_item").setUnlocalizedName("tome_item").setCreativeTab(BetterTabs.tabBetterMaterials);
 		SALT = registerItem(new Item(), "salt").setUnlocalizedName("salt").setCreativeTab(BetterTabs.tabBetterMaterials);
 	}
 	public static void registerRenders()
