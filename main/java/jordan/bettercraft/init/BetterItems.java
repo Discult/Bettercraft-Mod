@@ -1,5 +1,8 @@
 package jordan.bettercraft.init;
 
+import com.sun.xml.internal.ws.assembler.dev.ServerTubelineAssemblyContext;
+
+import jordan.bettercraft.init.items.ItemFlyingRing;
 import jordan.bettercraft.init.items.potionitems.ItemSwift;
 import jordan.bettercraft.init.items.potionitems.ItemTome;
 import jordan.bettercraft.main.Reference;
@@ -21,6 +24,7 @@ public class BetterItems
 	public static Item SALT;
 	public static Item TOME;
 	public static Item CATALYST;
+	public static Item FLYING_RING;
 	
 	public static void init()
 	{
@@ -33,6 +37,7 @@ public class BetterItems
 		TOME = registerItem(new ItemTome(), "tome_item").setUnlocalizedName("tome_item").setCreativeTab(BetterTabs.tabBetterMaterials);
 		SALT = registerItem(new Item(), "salt").setUnlocalizedName("salt").setCreativeTab(BetterTabs.tabBetterMaterials);
 		CATALYST = registerItem(new Item(), "catalyst").setUnlocalizedName("catalyst").setCreativeTab(BetterTabs.tabBetterMaterials);
+		FLYING_RING = registerItem(new ItemFlyingRing(), "flying_ring").setUnlocalizedName("flying_ring").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
 	}
 	public static void registerRenders()
 	{
@@ -45,6 +50,7 @@ public class BetterItems
 		registerRender(SALT);
 		registerRender(TOME);
 		registerRender(CATALYST);
+		registerRender(FLYING_RING);
 	}
 	
 	public static void registerRender(Item item)

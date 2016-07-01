@@ -56,3 +56,6 @@ item.swift_item.name=Swift Item
 
 //Armor
 item.steel_helmet.name=Steel Helmet
+
+//Special Items
+item.flying_ring.name=Ring of Flight
