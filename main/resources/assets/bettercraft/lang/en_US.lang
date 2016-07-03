@@ -3,11 +3,16 @@ item.ruby.name=Ruby
 item.sapphire.name=Sapphire
 item.copper_ingot.name=Copper Ingot
 item.dragon_scale.name=Dragon Scale
+item.steel_ingot.name=Steel Ingot
+item.salt.name=Salt
 
 //Building Blocks
 tile.ruby_ore.name=Ruby Ore
 tile.sapphire_ore.name=Sapphire Ore
 tile.copper_ore.name=Copper Ore
+
+//Special Blocks
+tile.altar.name=Altar
 
 //Furnaces
 tile.QUARTZ_FURNACE.name=Quartz Furnace
@@ -56,6 +61,26 @@ item.swift_item.name=Swift Item
 
 //Armor
 item.steel_helmet.name=Steel Helmet
+item.steel_chestplate.name=Steel Chestplate
+item.steel_leggings.name=Steel Leggings
+item.steel_boots.name=Steel Boots
 
-//Special Items
+//Miscellaneous
 item.flying_ring.name=Ring of Flight
+item.tome_item.name=Tome
+item.catalyst.name=Catalyst
+
+//Foods
+item.strawberry.name=Strawberry
+item.sweet_corn_raw.name=Sweet Corn
+item.lettuce.name=Lettuce
+item.bacon.name=bacon
+item.bacon_cooked.name=Cooked Bacon
+item.BLT.name=BLT
+item.tomato.name=Tomato
+
+//Seeds
+item.strawberry_seed.name=Strawberry Seed
+item.sweet_corn_seed.name=Sweet Corn Seed
+item.tomato_seed.name=Tomato Seed
+item.lettuce_seed.name=Lettuce Seed

@@ -15,39 +15,45 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BetterItems 
 {
+	//Materials
 	public static Item RUBY;
 	public static Item SAPPHIRE;
 	public static Item COPPER_INGOT;
 	public static Item DRAGON_SCALE;
 	public static Item STEEL_INGOT;
-	public static Item SWIFT_ITEM;
 	public static Item SALT;
+	//Miscellaneous
+	public static Item SWIFT_ITEM;
 	public static Item TOME;
 	public static Item CATALYST;
 	public static Item FLYING_RING;
 	
 	public static void init()
 	{
+		//Materials
 		RUBY = registerItem(new Item(), "ruby").setUnlocalizedName("ruby").setCreativeTab(BetterTabs.tabBetterMaterials);
 		SAPPHIRE = registerItem(new Item(), "sapphire").setUnlocalizedName("sapphire").setCreativeTab(BetterTabs.tabBetterMaterials);
 		COPPER_INGOT = registerItem(new Item(), "copper_ingot").setUnlocalizedName("copper_ingot").setCreativeTab(BetterTabs.tabBetterMaterials);
 		DRAGON_SCALE = registerItem(new Item(), "dragon_scale").setUnlocalizedName("dragon_scale").setCreativeTab(BetterTabs.tabBetterMaterials);
 		STEEL_INGOT = registerItem(new Item(), "steel_ingot").setUnlocalizedName("steel_ingot").setCreativeTab(BetterTabs.tabBetterMaterials);
-		SWIFT_ITEM = registerItem(new ItemSwift(), "swift_item").setUnlocalizedName("swift_item").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
-		TOME = registerItem(new ItemTome(), "tome_item").setUnlocalizedName("tome_item").setCreativeTab(BetterTabs.tabBetterMaterials);
 		SALT = registerItem(new Item(), "salt").setUnlocalizedName("salt").setCreativeTab(BetterTabs.tabBetterMaterials);
-		CATALYST = registerItem(new Item(), "catalyst").setUnlocalizedName("catalyst").setCreativeTab(BetterTabs.tabBetterMaterials);
+		//Miscellaneous
+		SWIFT_ITEM = registerItem(new ItemSwift(), "swift_item").setUnlocalizedName("swift_item").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
+		TOME = registerItem(new ItemTome(), "tome_item").setUnlocalizedName("tome_item").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
+		CATALYST = registerItem(new Item(), "catalyst").setUnlocalizedName("catalyst").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
 		FLYING_RING = registerItem(new ItemFlyingRing(), "flying_ring").setUnlocalizedName("flying_ring").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
 	}
 	public static void registerRenders()
 	{
+		//Materials
 		registerRender(RUBY);
 		registerRender(SAPPHIRE);
 		registerRender(COPPER_INGOT);
 		registerRender(DRAGON_SCALE);
 		registerRender(STEEL_INGOT);
-		registerRender(SWIFT_ITEM);
 		registerRender(SALT);
+		//Miscellaneous
+		registerRender(SWIFT_ITEM);
 		registerRender(TOME);
 		registerRender(CATALYST);
 		registerRender(FLYING_RING);

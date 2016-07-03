@@ -18,10 +18,10 @@ public class BetterSeeds
 	public static Item TOMATO_SEED;
 	public static void init()
 	{
-		STRAWBERRY_SEED = registerItem(new ItemSeeds(BetterCrops.STRAWBERRY_PLANT, Blocks.FARMLAND), "strawberry_seed").setUnlocalizedName("strawberry_seed").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
-		SWEET_CORN_SEED = registerItem(new ItemSeeds(BetterCrops.SWEET_CORN_PLANT, Blocks.FARMLAND), "sweet_corn_seed").setUnlocalizedName("sweet_corn_seed").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
-		LETTUCE_SEED = registerItem(new ItemSeeds(BetterCrops.LETTUCE_PLANT, Blocks.FARMLAND), "lettuce_seed").setUnlocalizedName("lettuce_seed").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
-		TOMATO_SEED = registerItem(new ItemSeeds(BetterCrops.TOMATO_PLANT, Blocks.FARMLAND), "tomato_seed").setUnlocalizedName("tomato_seed").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
+		STRAWBERRY_SEED = registerItem(new ItemSeeds(BetterCrops.STRAWBERRY_PLANT, Blocks.FARMLAND), "strawberry_seed").setUnlocalizedName("strawberry_seed").setCreativeTab(BetterTabs.tabBetterMaterials);
+		SWEET_CORN_SEED = registerItem(new ItemSeeds(BetterCrops.SWEET_CORN_PLANT, Blocks.FARMLAND), "sweet_corn_seed").setUnlocalizedName("sweet_corn_seed").setCreativeTab(BetterTabs.tabBetterMaterials);
+		LETTUCE_SEED = registerItem(new ItemSeeds(BetterCrops.LETTUCE_PLANT, Blocks.FARMLAND), "lettuce_seed").setUnlocalizedName("lettuce_seed").setCreativeTab(BetterTabs.tabBetterMaterials);
+		TOMATO_SEED = registerItem(new ItemSeeds(BetterCrops.TOMATO_PLANT, Blocks.FARMLAND), "tomato_seed").setUnlocalizedName("tomato_seed").setCreativeTab(BetterTabs.tabBetterMaterials);
 	}
 	public static void registerRenders()
 	{

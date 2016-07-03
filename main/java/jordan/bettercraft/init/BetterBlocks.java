@@ -18,12 +18,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BetterBlocks 
 {
-	
+	//Ores
 	public static Block RUBY_ORE;
 	public static Block SAPPHIRE_ORE;
 	public static Block COPPER_ORE;
+	//Normal Blocks
+	
+	//Other
 	public static Block ALTAR;
-	public static Block CUSTOM_BLOCK;
 	
 	public static void init()
 	{
@@ -36,9 +38,6 @@ public class BetterBlocks
 		COPPER_ORE = new CopperOre();
 		COPPER_ORE.setUnlocalizedName("copper_ore");
 		
-		CUSTOM_BLOCK = new CustomBlock();
-		CUSTOM_BLOCK.setUnlocalizedName("custom_block");
-		
 		ALTAR = new Altar();
 		ALTAR.setUnlocalizedName("altar");
 		
@@ -50,7 +49,6 @@ public class BetterBlocks
 		registerRender(RUBY_ORE);
 		registerRender(SAPPHIRE_ORE);
 		registerRender(COPPER_ORE);
-		registerRender(CUSTOM_BLOCK);
 		registerRender(ALTAR);
 		
 	}
