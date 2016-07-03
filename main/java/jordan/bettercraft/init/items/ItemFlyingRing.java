@@ -1,5 +1,6 @@
 package jordan.bettercraft.init.items;
 
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -13,12 +14,30 @@ import net.minecraft.world.World;
 public class ItemFlyingRing extends Item 
 {
 	
-	@Override
-	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) 
-	{
-		playerIn.capabilities.allowFlying = true;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//@Override
+	//public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) 
+	//{
+		//playerIn.capabilities.allowFlying = true;
 		
 		
-		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemStackIn);
-	}
+		//return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemStackIn);
+	//}
 }

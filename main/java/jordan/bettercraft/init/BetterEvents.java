@@ -13,6 +13,7 @@ import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickBlock;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickItem;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
 public class BetterEvents {
 
@@ -44,17 +45,15 @@ public class BetterEvents {
 
 	}
 
+	// this works but i can see it being really not server freindly
 	@SubscribeEvent
-	public void FlightRing(RightClickItem event) {
-		if (event.getItemStack() != null) {
-			if (event.getItemStack().equals(new ItemStack(BetterItems.FLYING_RING))) {
-				if (event.getEntityPlayer().capabilities.allowFlying = false) {
-					event.getEntityPlayer().capabilities.allowFlying = true;
-				}else{
-					event.getEntityPlayer().capabilities.allowFlying = false;
-				}
-
-			}
+	public void PlayerTick(PlayerTickEvent event){
+		if (event.player.inventory.hasItemStack(new ItemStack(BetterItems.FLYING_RING))){
+			event.player.capabilities.allowFlying = true;
+		}else{
+			event.player.capabilities.allowFlying = false;
 		}
 	}
+	
+	
 }
