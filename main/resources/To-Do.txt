@@ -1,0 +1,64 @@
+To Do file for v1.0 release 
+
+Special blocks:
+Furnaces?(needs a GUI too)
+Chests?(needs a GUI too)
+More?(needs a GUI too)
+Altar(Maybe cool particles on craft?)
+
+Armor/tools:
+Ninja armor?(would add potion effects)
+more rings?
+
+
+Mobs:
+mobs?
+
+Sounds:
+custom sound to altar crafting?
+ More?
+ 
+ 
+ Blocks:
+ More content
+ 
+ Multiblocks:
+ Maybe?
+ if we do add this we should do a blast furnace
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
