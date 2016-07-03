@@ -5,6 +5,8 @@ item.copper_ingot.name=Copper Ingot
 item.dragon_scale.name=Dragon Scale
 item.steel_ingot.name=Steel Ingot
 item.salt.name=Salt
+item.aluminum_ingot.name=Aluminum Ingot
+item.ring.name=Ring
 
 //Building Blocks
 tile.ruby_ore.name=Ruby Ore

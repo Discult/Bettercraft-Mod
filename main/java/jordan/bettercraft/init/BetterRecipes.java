@@ -174,12 +174,16 @@ public class BetterRecipes
 				'B', BetterFoods.BACON, 'L', BetterFoods.LETTUCE, 'T', BetterFoods.TOMATO
 				
 		});
-		GameRegistry.addRecipe(new ItemStack(BetterItems.SALT), new Object[] {
-				" C ",
-				'C', Items.WATER_BUCKET, 
+		GameRegistry.addShapelessRecipe(new ItemStack(BetterItems.SALT), new ItemStack(Items.WATER_BUCKET));
+		
+		
+		GameRegistry.addRecipe(new ItemStack(BetterItems.RING), new Object[] {
+				"AAA",
+				"A A",
+				"AAA",
+				'A', BetterItems.ALUMINUM_INGOT
 				
 		});
-		
 		
 		
 		
