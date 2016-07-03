@@ -12,7 +12,8 @@ more rings?
 
 
 Mobs:
-mobs?
+Completed 2 is enough for now
+
 
 Sounds:
 custom sound to altar crafting?

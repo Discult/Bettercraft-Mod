@@ -22,11 +22,13 @@ public class BetterItems
 	public static Item DRAGON_SCALE;
 	public static Item STEEL_INGOT;
 	public static Item SALT;
+	public static Item ALUMINUM_INGOT;
+	
 	//Miscellaneous
 	public static Item SWIFT_ITEM;
-	public static Item TOME;
 	public static Item CATALYST;
 	public static Item FLYING_RING;
+	public static Item RING;
 	
 	public static void init()
 	{
@@ -37,11 +39,14 @@ public class BetterItems
 		DRAGON_SCALE = registerItem(new Item(), "dragon_scale").setUnlocalizedName("dragon_scale").setCreativeTab(BetterTabs.tabBetterMaterials);
 		STEEL_INGOT = registerItem(new Item(), "steel_ingot").setUnlocalizedName("steel_ingot").setCreativeTab(BetterTabs.tabBetterMaterials);
 		SALT = registerItem(new Item(), "salt").setUnlocalizedName("salt").setCreativeTab(BetterTabs.tabBetterMaterials);
+		ALUMINUM_INGOT = registerItem(new Item(), "aluminum_ingot").setUnlocalizedName("aluminum_ingot").setCreativeTab(BetterTabs.tabBetterMaterials);
+		
 		//Miscellaneous
 		SWIFT_ITEM = registerItem(new ItemSwift(), "swift_item").setUnlocalizedName("swift_item").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
-		TOME = registerItem(new ItemTome(), "tome_item").setUnlocalizedName("tome_item").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
 		CATALYST = registerItem(new Item(), "catalyst").setUnlocalizedName("catalyst").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
 		FLYING_RING = registerItem(new ItemFlyingRing(), "flying_ring").setUnlocalizedName("flying_ring").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
+		RING = registerItem(new Item(), "ring").setUnlocalizedName("ring").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
+		
 	}
 	public static void registerRenders()
 	{
@@ -52,11 +57,13 @@ public class BetterItems
 		registerRender(DRAGON_SCALE);
 		registerRender(STEEL_INGOT);
 		registerRender(SALT);
+		registerRender(ALUMINUM_INGOT);
+		
 		//Miscellaneous
 		registerRender(SWIFT_ITEM);
-		registerRender(TOME);
 		registerRender(CATALYST);
 		registerRender(FLYING_RING);
+		registerRender(RING);
 	}
 	
 	public static void registerRender(Item item)

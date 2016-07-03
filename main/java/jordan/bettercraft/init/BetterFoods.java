@@ -21,6 +21,7 @@ public class BetterFoods
 	public static Item BLT;
 	public static Item LETTUCE;
 	public static Item TOMATO;
+	
 	public static void init()
 	{
 		STRAWBERRY = registerItem(new ItemFood(2, 3.0F, false), "strawberry").setUnlocalizedName("strawberry").setCreativeTab(BetterTabs.tabBetterFood);
