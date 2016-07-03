@@ -17,8 +17,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
 public class BetterEvents {
-   
-	//start basic altar crafting method
+
+	// start basic altar crafting method
 	@SubscribeEvent
 	public void speedCrafting(RightClickBlock event) {
 		if (event.getItemStack() != null && event.getWorld().getBlockState(event.getPos()).getBlock() != null) {
@@ -28,7 +28,8 @@ public class BetterEvents {
 				event.getEntityPlayer().inventory.clearMatchingItems(Items.SUGAR, 0, 1, null);
 				event.getEntityPlayer().inventory.clearMatchingItems(BetterItems.CATALYST, 0, 1, null);
 				event.getEntityPlayer().inventory.addItemStackToInventory(new ItemStack(BetterItems.SWIFT_ITEM));
-                event.getWorld().spawnParticle(EnumParticleTypes.LAVA, event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), 0, 0, 0, null);
+				event.getWorld().spawnParticle(EnumParticleTypes.DRAGON_BREATH, event.getPos().getX(),
+						event.getPos().getY(), event.getPos().getZ(), 0, 0, 0, null);
 			}
 
 		}
@@ -46,24 +47,23 @@ public class BetterEvents {
 		}
 
 	}
-  //end the altar crafting
-	
-	
-	
-	
-	
-	
+	// end the altar crafting
+
 	// this works but i can see it being really not server freindly
 	@SubscribeEvent
-	public void PlayerTick(PlayerTickEvent event){
-		if (event.player.inventory.hasItemStack(new ItemStack(BetterItems.FLYING_RING))){
-			event.player.capabilities.allowFlying = true;
-		}else{
-			event.player.capabilities.allowFlying = false;
+	public void PlayerTick(PlayerTickEvent event) {
+		if (event.player.isCreative()) {
+
+		} else {
+			if (event.player.inventory.hasItemStack(new ItemStack(BetterItems.FLYING_RING))) {
+
+				event.player.capabilities.allowFlying = true;
+			} else {
+				event.player.capabilities.allowFlying = false;
+
+			}
+
 		}
-		
-			
+
 	}
-	
-	
 }
