@@ -28,7 +28,7 @@ public class BetterEvents {
 				event.getEntityPlayer().inventory.clearMatchingItems(Items.SUGAR, 0, 1, null);
 				event.getEntityPlayer().inventory.clearMatchingItems(BetterItems.CATALYST, 0, 1, null);
 				event.getEntityPlayer().inventory.addItemStackToInventory(new ItemStack(BetterItems.SWIFT_ITEM));
-				event.getWorld().spawnParticle(EnumParticleTypes.DRAGON_BREATH, event.getPos().getX(),
+				event.getWorld().spawnParticle(EnumParticleTypes.EXPLOSION_HUGE, event.getPos().getX(),
 						event.getPos().getY(), event.getPos().getZ(), 0, 0, 0, null);
 			}
 
@@ -53,14 +53,11 @@ public class BetterEvents {
 	@SubscribeEvent
 	public void PlayerTick(PlayerTickEvent event) {
 		if (event.player.isCreative()) {
-
 		} else {
 			if (event.player.inventory.hasItemStack(new ItemStack(BetterItems.FLYING_RING))) {
-
 				event.player.capabilities.allowFlying = true;
 			} else {
 				event.player.capabilities.allowFlying = false;
-
 			}
 
 		}
