@@ -12,6 +12,7 @@ import jordan.bettercraft.init.BetterWeapons;
 import jordan.bettercraft.init.BetterEvents;
 import jordan.bettercraft.init.MobDropsHandler;
 import net.minecraft.item.Item;
+import net.minecraft.world.gen.structure.StructureStrongholdPieces.ChestCorridor;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -32,6 +33,8 @@ public class CommonProxy
 		BetterSoundEvents.registerSounds();
 		MinecraftForge.EVENT_BUS.register(new BetterEvents());
 		MinecraftForge.EVENT_BUS.register((Object)new MobDropsHandler());
+		
+		
 		
 	}
 	

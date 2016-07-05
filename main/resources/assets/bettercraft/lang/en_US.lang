@@ -60,6 +60,7 @@ entity.bettercraft.mummy.name=Mummy
 
 //Potion Items
 item.swift_item.name=Swift Item
+item.jump_item.name=Jump Boost Item
 
 //Armor
 item.steel_helmet.name=Steel Helmet

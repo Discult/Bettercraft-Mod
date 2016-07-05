@@ -42,11 +42,32 @@ public class BetterEvents {
 					&& event.getItemStack().getItem().equals(Items.NETHER_STAR)) {
 				event.getEntityPlayer().inventory.clearMatchingItems(Items.NETHER_STAR, 0, 1, null);
 				event.getEntityPlayer().inventory.addItemStackToInventory(new ItemStack(BetterItems.CATALYST, 10));
+				event.getWorld().spawnParticle(EnumParticleTypes.EXPLOSION_HUGE, event.getPos().getX(),
+						event.getPos().getY(), event.getPos().getZ(), 0, 0, 0, null);
 			}
 
 		}
 
 	}
+	
+	@SubscribeEvent
+	public void FRingCrafting(RightClickBlock event) {
+		if (event.getItemStack() != null && event.getWorld().getBlockState(event.getPos()).getBlock() != null) {
+			if (event.getWorld().getBlockState(event.getPos()).getBlock().equals(BetterBlocks.ALTAR)
+					&& event.getItemStack().getItem().equals(Items.ELYTRA)
+					&& event.getEntityPlayer().inventory.hasItemStack(new ItemStack(Items.NETHER_STAR)) 
+					&& event.getEntityPlayer().inventory.hasItemStack(new ItemStack(BetterItems.RING))) {
+				event.getEntityPlayer().inventory.clearMatchingItems(Items.ELYTRA, 0, 1, null);
+				event.getEntityPlayer().inventory.clearMatchingItems(Items.NETHER_STAR, 0, 1, null);
+				event.getEntityPlayer().inventory.clearMatchingItems(BetterItems.RING, 0, 1, null);
+				event.getEntityPlayer().inventory.addItemStackToInventory(new ItemStack(BetterItems.FLYING_RING));
+				event.getWorld().spawnParticle(EnumParticleTypes.EXPLOSION_HUGE, event.getPos().getX(),
+						event.getPos().getY(), event.getPos().getZ(), 0, 0, 0, null);
+			}
+
+		}
+	}
+	
 	// end the altar crafting
 
 	// this works but i can see it being really not server freindly

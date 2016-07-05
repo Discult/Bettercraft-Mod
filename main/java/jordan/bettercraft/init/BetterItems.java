@@ -3,8 +3,9 @@ package jordan.bettercraft.init;
 import com.sun.xml.internal.ws.assembler.dev.ServerTubelineAssemblyContext;
 
 import jordan.bettercraft.init.items.ItemFlyingRing;
+import jordan.bettercraft.init.items.ItemTome;
+import jordan.bettercraft.init.items.potionitems.ItemJump;
 import jordan.bettercraft.init.items.potionitems.ItemSwift;
-import jordan.bettercraft.init.items.potionitems.ItemTome;
 import jordan.bettercraft.main.Reference;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -26,6 +27,7 @@ public class BetterItems
 	
 	//Miscellaneous
 	public static Item SWIFT_ITEM;
+	public static Item JUMP_ITEM;
 	public static Item CATALYST;
 	public static Item FLYING_RING;
 	public static Item RING;
@@ -43,9 +45,11 @@ public class BetterItems
 		
 		//Miscellaneous
 		SWIFT_ITEM = registerItem(new ItemSwift(), "swift_item").setUnlocalizedName("swift_item").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
+		JUMP_ITEM = registerItem(new ItemJump(), "jump_item").setUnlocalizedName("jump_item").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
 		CATALYST = registerItem(new Item(), "catalyst").setUnlocalizedName("catalyst").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
 		FLYING_RING = registerItem(new ItemFlyingRing(), "flying_ring").setUnlocalizedName("flying_ring").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
 		RING = registerItem(new Item(), "ring").setUnlocalizedName("ring").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
+
 		
 	}
 	public static void registerRenders()
@@ -61,6 +65,7 @@ public class BetterItems
 		
 		//Miscellaneous
 		registerRender(SWIFT_ITEM);
+		registerRender(JUMP_ITEM);
 		registerRender(CATALYST);
 		registerRender(FLYING_RING);
 		registerRender(RING);

@@ -1,4 +1,4 @@
-package jordan.bettercraft.init.items.potionitems;
+package jordan.bettercraft.init.items;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
