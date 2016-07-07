@@ -1,6 +1,7 @@
 package jordan.bettercraft.init;
 
 import jordan.bettercraft.init.blocks.Altar;
+import jordan.bettercraft.init.blocks.BaseBlock;
 import jordan.bettercraft.init.blocks.CustomBlock;
 import jordan.bettercraft.init.blocks.ores.CopperOre;
 import jordan.bettercraft.init.blocks.ores.RubyOre;
@@ -8,6 +9,7 @@ import jordan.bettercraft.init.blocks.ores.SapphireOre;
 import jordan.bettercraft.main.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockHugeMushroom.EnumType;
+import net.minecraft.block.material.Material;
 import net.minecraft.block.BlockPlanks;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -26,7 +28,6 @@ public class BetterBlocks
 	
 	//Other
 	public static Block ALTAR;
-	
 	public static void init()
 	{
 		RUBY_ORE = new RubyOre();
@@ -41,6 +42,7 @@ public class BetterBlocks
 		ALTAR = new Altar();
 		ALTAR.setUnlocalizedName("altar");
 		
+	
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -50,6 +52,7 @@ public class BetterBlocks
 		registerRender(SAPPHIRE_ORE);
 		registerRender(COPPER_ORE);
 		registerRender(ALTAR);
+		
 		
 	}
 	
