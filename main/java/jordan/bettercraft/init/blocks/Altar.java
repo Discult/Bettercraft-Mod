@@ -1,5 +1,7 @@
 package jordan.bettercraft.init.blocks;
 
+import java.util.ArrayList;
+
 import jordan.bettercraft.init.BetterTabs;
 import jordan.bettercraft.init.tileentitys.AltarTileEntity;
 import net.minecraft.block.Block;
@@ -22,7 +24,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class Altar extends Block implements ITileEntityProvider
 {
-
+	
 	public Altar() 
 	{
 		super(Material.ROCK);
@@ -69,13 +71,15 @@ public class Altar extends Block implements ITileEntityProvider
 	    @Override
 	    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player,
 	                    EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-	        if (!world.isRemote) {
+	      
+	    	if (!world.isRemote) {
 	            AltarTileEntity te = getTE(world, pos);
 	            if (te.getStack() == null) {
 	                if (player.getHeldItem(hand) != null) {
 	                    // There is no item in the pedestal and the player is holding an item. We move that item
 	                    // to the pedestal
 	                    te.setStack(player.getHeldItem(hand));
+	                    // add the entire stack
 	                    player.inventory.setInventorySlotContents(player.inventory.currentItem, null);
 	                    // Make sure the client knows about the changes in the player inventory
 	                    player.openContainer.detectAndSendChanges();
