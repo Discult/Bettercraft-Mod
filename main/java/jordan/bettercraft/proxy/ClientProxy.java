@@ -27,11 +27,8 @@ public class ClientProxy extends CommonProxy
 	@Override
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		super.preInit(event);
-		
+		super.preInit(event);	
 		OBJLoader.INSTANCE.addDomain(Reference.MODID);
-
-		
 	}
 	
 	@Override
@@ -53,9 +50,7 @@ public class ClientProxy extends CommonProxy
 		
 		GameRegistry.registerWorldGenerator(new BetterWorldGen(), 0);
 		
-		MinecraftForge.EVENT_BUS.register(new MobDropsHandler());;
-		
-		
+		MinecraftForge.EVENT_BUS.register(new MobDropsHandler());
 	}
 	
 	@Override
