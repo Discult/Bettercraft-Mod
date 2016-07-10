@@ -12,8 +12,7 @@ public class SweetcornPlant extends BlockCrops
 	public SweetcornPlant()
 	{
 		setRegistryName("sweet_corn_plant");
-		GameRegistry.register(this);
-		GameRegistry.register(new ItemBlock(this), getRegistryName());
+		setUnlocalizedName("sweet_corn_plant");
 	}
 	
 	@Override

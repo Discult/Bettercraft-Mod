@@ -13,8 +13,7 @@ public class LettucePlant extends BlockCrops
 	public LettucePlant()
 	{
 		setRegistryName("lettuce_plant");
-		GameRegistry.register(this);
-		GameRegistry.register(new ItemBlock(this), getRegistryName());
+		setUnlocalizedName("lettuce_plant");
 	}
 	
 

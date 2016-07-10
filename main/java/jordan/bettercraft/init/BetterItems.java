@@ -2,7 +2,7 @@ package jordan.bettercraft.init;
 
 import com.sun.xml.internal.ws.assembler.dev.ServerTubelineAssemblyContext;
 
-import jordan.bettercraft.init.items.ItemFlyingRing;
+import jordan.bettercraft.init.items.misc.ItemFlyingRing;
 import jordan.bettercraft.init.items.potionitems.ItemJump;
 import jordan.bettercraft.init.items.potionitems.ItemSwift;
 import jordan.bettercraft.main.Reference;

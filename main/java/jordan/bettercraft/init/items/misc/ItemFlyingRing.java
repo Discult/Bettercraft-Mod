@@ -1,4 +1,4 @@
-package jordan.bettercraft.init.items;
+package jordan.bettercraft.init.items.misc;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;

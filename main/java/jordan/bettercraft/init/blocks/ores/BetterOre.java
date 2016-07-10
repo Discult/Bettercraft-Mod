@@ -71,7 +71,7 @@ public class BetterOre extends Block
 	            {
 	                i = MathHelper.getRandomIntegerInRange(rand, 3, 6);
 	            }
-	            else if (this == BetterBlocks.SAPPHIRE_ORE)
+	          else if (this == BetterBlocks.SAPPHIRE_ORE)
 	           {
 	                i = MathHelper.getRandomIntegerInRange(rand, 3, 6);
 	           }

@@ -11,8 +11,7 @@ public class RubyOre extends BetterOre
 	public RubyOre()
 	{
 		setRegistryName("ruby_ore");
-		GameRegistry.register(this);
-		GameRegistry.register(new ItemBlock(this), getRegistryName());
+		setUnlocalizedName("ruby_ore");
 		setHarvestLevel("pickaxe", 2);
 		setHardness(2.5F);
 		setResistance(13F);

@@ -13,8 +13,7 @@ public class TomatoPlant extends BlockCrops
 	public TomatoPlant()
 	{
 		setRegistryName("tomato_plant");
-		GameRegistry.register(this);
-		GameRegistry.register(new ItemBlock(this), getRegistryName());
+		setUnlocalizedName("tomato_plant");
 	}
 	
 

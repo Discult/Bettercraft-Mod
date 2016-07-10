@@ -27,8 +27,7 @@ public class Altar extends Block implements ITileEntityProvider
 	{
 		super(Material.ROCK);
 		setRegistryName("altar");
-		GameRegistry.register(this);
-		GameRegistry.register(new ItemBlock(this), getRegistryName());
+		setUnlocalizedName("altar");
 		GameRegistry.registerTileEntity(AltarTileEntity.class, "alter_tile_entity");
 		setCreativeTab(BetterTabs.tabBetterBuildingBlocks);
 	}

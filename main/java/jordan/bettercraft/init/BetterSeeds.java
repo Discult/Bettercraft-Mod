@@ -16,6 +16,7 @@ public class BetterSeeds
 	public static Item SWEET_CORN_SEED;
 	public static Item LETTUCE_SEED;
 	public static Item TOMATO_SEED;
+	
 	public static void init()
 	{
 		STRAWBERRY_SEED = registerItem(new ItemSeeds(BetterCrops.STRAWBERRY_PLANT, Blocks.FARMLAND), "strawberry_seed").setUnlocalizedName("strawberry_seed").setCreativeTab(BetterTabs.tabBetterMaterials);
