@@ -13,8 +13,7 @@ public class StrawberryPlant extends BlockCrops
 	public StrawberryPlant()
 	{
 		setRegistryName("strawberry_plant");
-		GameRegistry.register(this);
-		GameRegistry.register(new ItemBlock(this), getRegistryName());
+		setUnlocalizedName("strawberry_plant");
 	}
 	
 

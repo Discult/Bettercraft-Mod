@@ -10,8 +10,7 @@ public class CopperOre extends BetterOre
 	public CopperOre()
 	{
 		setRegistryName("copper_ore");
-		GameRegistry.register(this);
-		GameRegistry.register(new ItemBlock(this), getRegistryName());
+		setUnlocalizedName("copper_ore");
 		setHarvestLevel("pickaxe", 2);
 		setHardness(2.0F);
 		setResistance(10F);

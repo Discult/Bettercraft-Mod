@@ -7,7 +7,8 @@ import net.minecraft.item.Item;
 
 public class BetterTabs 
 {
-	public static final CreativeTabs tabBetterBuildingBlocks = new CreativeTabs("BetterBuildingBlocks") 
+	
+	  public static final CreativeTabs tabBetterBuildingBlocks = new CreativeTabs("BetterBuildingBlocks") 
 	{
 		
 		@Override
@@ -16,6 +17,8 @@ public class BetterTabs
 			return Item.getItemFromBlock(BetterBlocks.RUBY_ORE);
 		}
 	};
+	
+	
 	
 	public static final CreativeTabs tabBetterDecorationBlocks = new CreativeTabs("BetterDecorationBlocks") 
 	{
@@ -26,6 +29,7 @@ public class BetterTabs
 			return Item.getItemFromBlock(Blocks.LEAVES2);
 		}
 	};
+	
 	
 	public static final CreativeTabs tabBetterRedstone = new CreativeTabs("BetterRedstone") 
 	{

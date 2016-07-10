@@ -28,14 +28,21 @@ public class CommonProxy
 {
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		//Item type stuff
 		BetterItems.init();
-		BetterBlocks.init();
-		BetterTools.init();
-		BetterWeapons.init();
-		BetterCrops.init();
 		BetterSeeds.init();
 		BetterFoods.init();
 		BetterArmor.init();
+		BetterTools.init();
+		BetterWeapons.init();
+		
+		//Block type stuff
+		BetterBlocks.init();
+		BetterBlocks.register();
+		
+		BetterCrops.init();
+		BetterCrops.register();
+
 		BetterSoundEvents.registerSounds();
 		MinecraftForge.EVENT_BUS.register(new BetterEvents());
 		MinecraftForge.EVENT_BUS.register((Object)new MobDropsHandler());

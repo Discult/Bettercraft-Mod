@@ -1,6 +1,5 @@
 package jordan.bettercraft.init;
 
-import jordan.bettercraft.init.blocks.CustomBlock;
 import jordan.bettercraft.init.blocks.crops.LettucePlant;
 import jordan.bettercraft.init.blocks.crops.StrawberryPlant;
 import jordan.bettercraft.init.blocks.crops.SweetcornPlant;
@@ -13,6 +12,8 @@ import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BetterCrops 
 {
@@ -20,21 +21,33 @@ public class BetterCrops
 	public static Block SWEET_CORN_PLANT;
 	public static Block LETTUCE_PLANT;
 	public static Block TOMATO_PLANT;
+	
 	public static void init()
 	{
 		STRAWBERRY_PLANT = new StrawberryPlant();
-		STRAWBERRY_PLANT.setUnlocalizedName("strawberry_plant");
 		
 		SWEET_CORN_PLANT = new SweetcornPlant();
-		SWEET_CORN_PLANT.setUnlocalizedName("sweet_corn_plant");
 		
 		LETTUCE_PLANT = new LettucePlant();
-		LETTUCE_PLANT.setUnlocalizedName("lettuce_plant");
 		
 		TOMATO_PLANT = new TomatoPlant();
-		TOMATO_PLANT.setUnlocalizedName("strawberry_plant");
 	}
 	
+	public static void register()
+	{
+		registerBlock(STRAWBERRY_PLANT);
+		registerBlock(SWEET_CORN_PLANT);
+		registerBlock(LETTUCE_PLANT);
+		registerBlock(TOMATO_PLANT);
+	}
+	
+	public static void registerBlock(Block block)
+	{
+		GameRegistry.register(block);
+		ItemBlock item = new ItemBlock(block);
+		item.setRegistryName(block.getRegistryName());
+		GameRegistry.register(item);
+	}
 	
 	public static void registerRenders()
 	{
@@ -46,11 +59,6 @@ public class BetterCrops
 	
 	public static void registerRender(Block block)
 	{
-		
-		Item item = Item.getItemFromBlock(block);
-		
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-		.register(item, 0, new ModelResourceLocation(Reference.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
-
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
 	}
 }

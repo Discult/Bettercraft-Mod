@@ -1,1 +1,3 @@
-c
+{
+    "parent": "bettercraft:block/ruby_ore"
+}

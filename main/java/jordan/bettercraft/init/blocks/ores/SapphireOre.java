@@ -11,8 +11,7 @@ public class SapphireOre extends BetterOre
 	public SapphireOre()
 	{
 		setRegistryName("sapphire_ore");
-		GameRegistry.register(this);
-		GameRegistry.register(new ItemBlock(this), getRegistryName());
+		setUnlocalizedName("sapphire_ore");
 		setHarvestLevel("pickaxe", 2);
 		setHardness(2.5F);
 		setResistance(13F);
