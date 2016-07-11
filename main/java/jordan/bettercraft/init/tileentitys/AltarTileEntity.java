@@ -3,24 +3,39 @@ package jordan.bettercraft.init.tileentitys;
 import java.util.ArrayList;
 
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.item.EntityItem;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 
 public class AltarTileEntity extends TileEntity {
-	private ItemStack stack;
 	public ArrayList<ItemStack> inventory = new ArrayList<ItemStack>();
+	private ItemStack stack;
+
+	
+	
+	
+	
 
 	public ItemStack getStack() {
-		return stack;
+		for (int i = 0; i < inventory.size(); i++) {
+			ItemStack stack = inventory.get(i);
+			return stack;
+		}
+		return null;
+
 	}
 
 	public void setStack(ItemStack stack) {
-
 		markDirty();
 		if (worldObj != null) {
 			IBlockState state = worldObj.getBlockState(getPos());
@@ -73,23 +88,17 @@ public class AltarTileEntity extends TileEntity {
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound tag) {
 		super.writeToNBT(tag);
-		if (inventory.size() > 0){
+		if (inventory.size() > 0) {
 			NBTTagList list = new NBTTagList();
-			for (int i = 0; i < inventory.size(); i ++){
-				if (inventory.get(i) != null){
+			for (int i = 0; i < inventory.size(); i++) {
+				if (inventory.get(i) != null) {
 					list.appendTag(inventory.get(i).writeToNBT(new NBTTagCompound()));
 				}
 			}
-			tag.setTag("inventory",list);
-		
-}
+			tag.setTag("inventory", list);
+
+		}
 		return tag;
 
-
-		
-		
-		
-		
 	}
 }
-

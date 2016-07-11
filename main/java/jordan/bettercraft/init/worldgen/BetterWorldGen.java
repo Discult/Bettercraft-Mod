@@ -23,8 +23,8 @@ public class BetterWorldGen implements IWorldGenerator
 	 public BetterWorldGen() 
 	{
 		this.RUBY_ORE = new BetterWorldGenMineable(BetterBlocks.RUBY_ORE.getDefaultState(), 3);
-		//this.SAPPHIRE_ORE = new BetterWorldGenMineable(BetterBlocks.SAPPHIRE_ORE.getDefaultState(), 3);
-		//this.COPPER_ORE = new BetterWorldGenMineable(BetterBlocks.COPPER_ORE.getDefaultState(), 3);
+		this.SAPPHIRE_ORE = new BetterWorldGenMineable(BetterBlocks.SAPPHIRE_ORE.getDefaultState(), 3);
+		this.COPPER_ORE = new BetterWorldGenMineable(BetterBlocks.COPPER_ORE.getDefaultState(), 3);
 	}
 	
 	@Override
@@ -35,9 +35,9 @@ public class BetterWorldGen implements IWorldGenerator
 		{
 		case 0: //OverWorld
 			
-			this.runGenerator(this.RUBY_ORE, world, random, chunckX, chunckZ, 45, 0, 35);
-			this.runGenerator(this.SAPPHIRE_ORE, world, random, chunckX, chunckZ, 45, 0, 35);
-			this.runGenerator(this.COPPER_ORE, world, random, chunckX, chunckZ, 55, 0, 50);
+			//this.runGenerator(this.RUBY_ORE, world, random, chunckX, chunckZ, 45, 0, 35);
+			//this.runGenerator(this.SAPPHIRE_ORE, world, random, chunckX, chunckZ, 45, 0, 35);
+			//this.runGenerator(this.COPPER_ORE, world, random, chunckX, chunckZ, 55, 0, 50);
 			
 			break;
 		
