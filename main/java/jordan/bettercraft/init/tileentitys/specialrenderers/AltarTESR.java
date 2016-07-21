@@ -28,6 +28,7 @@ public class AltarTESR extends TileEntitySpecialRenderer<AltarTileEntity>
 	
 	private void renderItem(AltarTileEntity te) {
         ItemStack stack = te.getStack();
+        
         if (stack != null) {
             RenderHelper.enableStandardItemLighting();
             GlStateManager.enableLighting();

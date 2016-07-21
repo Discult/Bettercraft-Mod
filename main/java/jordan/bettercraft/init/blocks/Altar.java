@@ -1,5 +1,7 @@
 package jordan.bettercraft.init.blocks;
 
+import java.util.ArrayList;
+
 import jordan.bettercraft.init.BetterTabs;
 import jordan.bettercraft.init.tileentitys.AltarTileEntity;
 import net.minecraft.block.Block;
@@ -22,7 +24,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class Altar extends Block implements ITileEntityProvider
 {
-
+	  public ArrayList<ItemStack> inventory = new ArrayList<ItemStack>();
 	public Altar() 
 	{
 		super(Material.ROCK);
@@ -65,38 +67,41 @@ public class Altar extends Block implements ITileEntityProvider
 	        return (AltarTileEntity) world.getTileEntity(pos);
 	    }
 	    
+	    
+	    
+	    
+	    
+	    
+	  
 	    @Override
-	    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player,
-	                    EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-	        if (!world.isRemote) {
-	            AltarTileEntity te = getTE(world, pos);
-	            if (te.getStack() == null) {
-	                if (player.getHeldItem(hand) != null) {
-	                    // There is no item in the pedestal and the player is holding an item. We move that item
-	                    // to the pedestal
-	                    te.setStack(player.getHeldItem(hand));
-	                    player.inventory.setInventorySlotContents(player.inventory.currentItem, null);
-	                    // Make sure the client knows about the changes in the player inventory
-	                    player.openContainer.detectAndSendChanges();
-	                }
-	            } else {
-	                // There is a stack in the pedestal. In this case we remove it and try to put it in the
-	                // players inventory if there is room
-	                ItemStack stack = te.getStack();
-	                te.setStack(null);
-	                if (!player.inventory.addItemStackToInventory(stack)) {
-	                    // Not possible. Throw item in the world
-	                    EntityItem entityItem = new EntityItem(world, pos.getX(), pos.getY()+1, pos.getZ(), stack);
-	                    world.spawnEntityInWorld(entityItem);
-	                } else {
-	                    player.openContainer.detectAndSendChanges();
-	                }
-	            }
-	        }
+	    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand,
+				ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+			if (heldItem == null) {
+				if (inventory.size() > 0) {
+					if (!world.isRemote) {
+						world.spawnEntityInWorld(new EntityItem(world, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5,
+								inventory.remove(inventory.size() - 1)));
+					} else {
+						inventory.remove(inventory.size() - 1);
+					}
+				
+					return true;
+				}
+			
+			}
+			else {
+				ItemStack oneItem = new ItemStack(heldItem.getItem(),1,heldItem.getItemDamage());
+				if (heldItem.hasTagCompound()){
+					oneItem.setTagCompound(heldItem.getTagCompound());
+				}
+				inventory.add(oneItem);
+				heldItem.stackSize --;
+				return true;
+			}
+		
 
-	        // Return true also on the client to make sure that MC knows we handled this and will not try to place
-	        // a block on the client
-	        return true;
-	    }
+	return false;
+	}
+		
 	}
 
