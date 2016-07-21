@@ -23,8 +23,8 @@ public class BetterWorldGen implements IWorldGenerator
 	 public BetterWorldGen() 
 	{
 		this.RUBY_ORE = new BetterWorldGenMineable(BetterBlocks.RUBY_ORE.getDefaultState(), 3);
-		//this.SAPPHIRE_ORE = new BetterWorldGenMineable(BetterBlocks.SAPPHIRE_ORE.getDefaultState(), 3);
-		//this.COPPER_ORE = new BetterWorldGenMineable(BetterBlocks.COPPER_ORE.getDefaultState(), 3);
+		this.SAPPHIRE_ORE = new BetterWorldGenMineable(BetterBlocks.SAPPHIRE_ORE.getDefaultState(), 3);
+		this.COPPER_ORE = new BetterWorldGenMineable(BetterBlocks.COPPER_ORE.getDefaultState(), 3);
 	}
 	
 	@Override
