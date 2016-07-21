@@ -5,7 +5,8 @@ import java.util.Random;
 import javax.annotation.Nullable;
 
 import jordan.bettercraft.init.BetterBlocks;
-import jordan.bettercraft.init.blocks.furnaces.tileentitys.TileEntityQuartzFurnace;
+import jordan.bettercraft.init.tileentitys.blocks.TEQuartzFurnace;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
@@ -15,6 +16,7 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.InventoryHelper;
@@ -30,7 +32,6 @@ import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.SoundCategory;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -38,12 +39,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class QuartzFurnace extends BlockContainer 
 {
-	
-	
-	public static final PropertyDirection FACING = BlockHorizontal.FACING;
-    private final boolean isBurning;
-    private static boolean keepInventory;
 
+	public static final PropertyDirection FACING = BlockHorizontal.FACING;
+	private final boolean isBurning;
+	private static boolean keepInventory;
+	
 	public QuartzFurnace(boolean isBurning, String name) 
 	{
 		super(Material.ROCK);
@@ -69,7 +69,7 @@ public class QuartzFurnace extends BlockContainer
 
     private void setDefaultFacing(World worldIn, BlockPos pos, IBlockState state)
     {
-    	if (!worldIn.isRemote)
+        if (!worldIn.isRemote)
         {
             IBlockState iblockstate = worldIn.getBlockState(pos.north());
             IBlockState iblockstate1 = worldIn.getBlockState(pos.south());
@@ -147,9 +147,9 @@ public class QuartzFurnace extends BlockContainer
         {
             TileEntity tileentity = worldIn.getTileEntity(pos);
 
-            if (tileentity instanceof TileEntityQuartzFurnace)
+            if (tileentity instanceof TEQuartzFurnace)
             {
-                playerIn.displayGUIChest((TileEntityQuartzFurnace)tileentity);
+                playerIn.displayGUIChest((TEQuartzFurnace)tileentity);
                 playerIn.addStat(StatList.FURNACE_INTERACTION);
             }
 
@@ -165,8 +165,8 @@ public class QuartzFurnace extends BlockContainer
 
         if (active)
         {
-            worldIn.setBlockState(pos, BetterBlocks.QUARTZ_FURNACE_LIT.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-            worldIn.setBlockState(pos, BetterBlocks.QUARTZ_FURNACE_LIT.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, BetterBlocks.LIT_QUARTZ_FURNACE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, BetterBlocks.LIT_QUARTZ_FURNACE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
         }
         else
         {
@@ -188,7 +188,7 @@ public class QuartzFurnace extends BlockContainer
      */
     public TileEntity createNewTileEntity(World worldIn, int meta)
     {
-        return new TileEntityQuartzFurnace();
+        return new TEQuartzFurnace();
     }
 
     /**
@@ -211,9 +211,9 @@ public class QuartzFurnace extends BlockContainer
         {
             TileEntity tileentity = worldIn.getTileEntity(pos);
 
-            if (tileentity instanceof TileEntityQuartzFurnace)
+            if (tileentity instanceof TEQuartzFurnace)
             {
-                ((TileEntityQuartzFurnace)tileentity).setCustomInventoryName(stack.getDisplayName());
+                ((TEQuartzFurnace)tileentity).setCustomInventoryName(stack.getDisplayName());
             }
         }
     }
@@ -224,9 +224,9 @@ public class QuartzFurnace extends BlockContainer
         {
             TileEntity tileentity = worldIn.getTileEntity(pos);
 
-            if (tileentity instanceof TileEntityQuartzFurnace)
+            if (tileentity instanceof TEQuartzFurnace)
             {
-                InventoryHelper.dropInventoryItems(worldIn, pos, (TileEntityQuartzFurnace)tileentity);
+                InventoryHelper.dropInventoryItems(worldIn, pos, (TEQuartzFurnace)tileentity);
                 worldIn.updateComparatorOutputLevel(pos, this);
             }
         }

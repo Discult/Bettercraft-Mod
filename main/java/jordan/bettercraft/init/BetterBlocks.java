@@ -38,7 +38,7 @@ public class BetterBlocks
 	
 	//Furnace
 	public static Block QUARTZ_FURNACE;
-	public static Block QUARTZ_FURNACE_LIT;
+	public static Block LIT_QUARTZ_FURNACE;
 	
 	public static void init()
 	{
@@ -60,7 +60,7 @@ public class BetterBlocks
 		
 		//Furnace
 		QUARTZ_FURNACE = new QuartzFurnace(false, "quartz_furnace");
-		QUARTZ_FURNACE_LIT = new QuartzFurnace(true, "lit_quartz_furnace");
+		LIT_QUARTZ_FURNACE = new QuartzFurnace(true, "lit_quartz_furnace");
 	}
 	
 	public static void register()
@@ -83,7 +83,7 @@ public class BetterBlocks
 		
 		//Furnace
 		registerBlock(QUARTZ_FURNACE);
-		registerBlock(QUARTZ_FURNACE_LIT);
+		registerBlock(LIT_QUARTZ_FURNACE);
 	}
 	
 	private static void registerBlock(Block block)
@@ -114,7 +114,7 @@ public class BetterBlocks
 		
 		//Furnace
 		registerRender(QUARTZ_FURNACE);
-		registerRender(QUARTZ_FURNACE_LIT);
+		registerRender(LIT_QUARTZ_FURNACE);
 	}
 	
 	public static void registerRender(Block block)

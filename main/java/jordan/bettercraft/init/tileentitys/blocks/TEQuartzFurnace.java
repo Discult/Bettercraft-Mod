@@ -1,4 +1,4 @@
-package jordan.bettercraft.init.blocks.furnaces.tileentitys;
+package jordan.bettercraft.init.tileentitys.blocks;
 
 import javax.annotation.Nullable;
 
@@ -35,9 +35,9 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class TileEntityQuartzFurnace extends TileEntityLockable implements ITickable, ISidedInventory
+public class TEQuartzFurnace extends TileEntityLockable implements ITickable, ISidedInventory 
 {
-    private static final int[] SLOTS_TOP = new int[] {0};
+	private static final int[] SLOTS_TOP = new int[] {0};
     private static final int[] SLOTS_BOTTOM = new int[] {2, 1};
     private static final int[] SLOTS_SIDES = new int[] {1};
     /** The ItemStacks that hold the items currently being used in the furnace */
@@ -111,7 +111,7 @@ public class TileEntityQuartzFurnace extends TileEntityLockable implements ITick
      */
     public String getName()
     {
-        return this.hasCustomName() ? this.furnaceCustomName : "container.quatz_furnace";
+        return this.hasCustomName() ? this.furnaceCustomName : "container.quartz_furnace";
     }
 
     /**
@@ -285,11 +285,12 @@ public class TileEntityQuartzFurnace extends TileEntityLockable implements ITick
     }
 
     /**
-     * Setting the speed something cooks at
+     * Time To Cook Something Lower = Faster
      */
+    
     public int getCookTime(@Nullable ItemStack stack)
     {
-        return 400;
+        return 150;
     }
 
     /**

@@ -1,6 +1,6 @@
-package jordan.bettercraft.init.tileentitys.specialrenderers;
+package jordan.bettercraft.init.tileentitys.specialrenderers.blocks;
 
-import jordan.bettercraft.init.tileentitys.AltarTileEntity;
+import jordan.bettercraft.init.tileentitys.blocks.AltarTileEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;

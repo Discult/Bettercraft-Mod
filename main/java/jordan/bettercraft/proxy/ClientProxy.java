@@ -12,8 +12,9 @@ import jordan.bettercraft.init.BetterTools;
 import jordan.bettercraft.init.BetterWeapons;
 import jordan.bettercraft.init.MobDropsHandler;
 import jordan.bettercraft.init.mobs.MobRegistry;
-import jordan.bettercraft.init.tileentitys.AltarTileEntity;
-import jordan.bettercraft.init.tileentitys.specialrenderers.AltarTESR;
+import jordan.bettercraft.init.tileentitys.blocks.AltarTileEntity;
+import jordan.bettercraft.init.tileentitys.blocks.TEQuartzFurnace;
+import jordan.bettercraft.init.tileentitys.specialrenderers.blocks.AltarTESR;
 import jordan.bettercraft.init.worldgen.BetterWorldGen;
 import jordan.bettercraft.main.Reference;
 import net.minecraftforge.client.model.obj.OBJLoader;
@@ -51,6 +52,8 @@ public class ClientProxy extends CommonProxy
 		MobRegistry.register();
 		
 		ClientRegistry.bindTileEntitySpecialRenderer(AltarTileEntity.class, new AltarTESR());
+		
+		GameRegistry.registerTileEntity(TEQuartzFurnace.class, "QF");
 		
 		GameRegistry.registerWorldGenerator(new BetterWorldGen(), 0);
 		

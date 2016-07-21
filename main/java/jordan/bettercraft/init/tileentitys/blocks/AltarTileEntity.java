@@ -1,4 +1,4 @@
-package jordan.bettercraft.init.tileentitys;
+package jordan.bettercraft.init.tileentitys.blocks;
 
 import java.util.ArrayList;
 
@@ -27,7 +27,7 @@ public class AltarTileEntity extends TileEntity {
 	
 
 	public ItemStack getStack() {
-		for (int i = 0; i < inventory.size(); i++) {
+		for (int i = 0; i < inventory.size();) {
 			ItemStack stack = inventory.get(i);
 			return stack;
 		}

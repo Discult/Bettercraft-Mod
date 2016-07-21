@@ -3,7 +3,7 @@ package jordan.bettercraft.init.blocks;
 import java.util.ArrayList;
 
 import jordan.bettercraft.init.BetterTabs;
-import jordan.bettercraft.init.tileentitys.AltarTileEntity;
+import jordan.bettercraft.init.tileentitys.blocks.AltarTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
