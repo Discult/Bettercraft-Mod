@@ -1,76 +1,30 @@
 package jordan.bettercraft.init.tileentitys.blocks;
 
 import java.util.ArrayList;
+import java.util.Random;
 
+import jordan.bettercraft.init.BetterItems;
+import jordan.bettercraft.main.Reference;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.network.NetworkManager;
-import net.minecraft.network.play.server.SPacketUpdateTileEntity;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.ITickable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 
-public class AltarTileEntity extends TileEntity {
+public class AltarTileEntity extends TEBase {
 	public ArrayList<ItemStack> inventory = new ArrayList<ItemStack>();
-	private ItemStack stack;
+	Random random = new Random();
 
-	
-	
-	
-	
-
-	public ItemStack getStack() {
-		for (int i = 0; i < inventory.size();) {
-			ItemStack stack = inventory.get(i);
-			return stack;
-		}
-		return null;
-
-	}
-
-	public void setStack(ItemStack stack) {
-		markDirty();
-		if (worldObj != null) {
-			IBlockState state = worldObj.getBlockState(getPos());
-			worldObj.notifyBlockUpdate(getPos(), state, state, 3);
-		}
-	}
-
-	@Override
-	public NBTTagCompound getUpdateTag() {
-		// getUpdateTag() is called whenever the chunkdata is sent to the
-		// client. In contrast getUpdatePacket() is called when the tile entity
-		// itself wants to sync to the client. In many cases you want to send
-		// over the same information in getUpdateTag() as in getUpdatePacket().
-		return writeToNBT(new NBTTagCompound());
-	}
-
-	@Override
-	public SPacketUpdateTileEntity getUpdatePacket() {
-		// Prepare a packet for syncing our TE to the client. Since we only have
-		// to sync the stack
-		// and that's all we have we just write our entire NBT here. If you have
-		// a complex
-		// tile entity that doesn't need to have all information on the client
-		// you can write
-		// a more optimal NBT here.
-		NBTTagCompound nbtTag = new NBTTagCompound();
-		this.writeToNBT(nbtTag);
-		return new SPacketUpdateTileEntity(getPos(), 1, nbtTag);
-	}
-
-	@Override
-	public void onDataPacket(NetworkManager net, SPacketUpdateTileEntity packet) {
-		// Here we get the packet from the server and read it into our client
-		// side tile entity
-		this.readFromNBT(packet.getNbtCompound());
+	public AltarTileEntity() {
+		super();
 	}
 
 	@Override
@@ -91,14 +45,80 @@ public class AltarTileEntity extends TileEntity {
 		if (inventory.size() > 0) {
 			NBTTagList list = new NBTTagList();
 			for (int i = 0; i < inventory.size(); i++) {
+				;
 				if (inventory.get(i) != null) {
 					list.appendTag(inventory.get(i).writeToNBT(new NBTTagCompound()));
 				}
 			}
 			tag.setTag("inventory", list);
-
 		}
 		return tag;
-
 	}
+
+	@Override
+	public void breakBlock(World world, BlockPos pos, IBlockState state, EntityPlayer player) {
+		for (int i = 0; i < inventory.size(); i++) {
+			if (!world.isRemote) {
+				EntityItem item = new EntityItem(world, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
+						inventory.get(i));
+				item.forceSpawn = true;
+				world.spawnEntityInWorld(item);
+			}
+		}
+		this.invalidate();
+	}
+
+	public boolean activate(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand,
+			ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+		
+		if (player.isSneaking()){
+			System.out.println("This works");
+		
+				System.out.println("This works");
+				world.spawnEntityInWorld(new EntityItem(world, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5,
+						new ItemStack(BetterItems.FLYING_RING)));
+				System.out.println("This works");
+				inventory.clear();
+				System.out.println("This works");
+				return true;
+			}
+		
+		if (heldItem == null && !player.isSneaking()) {
+			if (inventory.size() > 0) {
+				if (!world.isRemote) {
+					world.spawnEntityInWorld(new EntityItem(world, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5,
+							inventory.remove(inventory.size() - 1)));
+				} else {
+					inventory.remove(inventory.size() - 1);
+				}
+				markDirty();
+				this.getWorld().notifyBlockUpdate(getPos(), state, world.getBlockState(pos), 3);
+				return true;
+			}
+		} else if (player.isSneaking() && heldItem == null) {
+
+		} else {
+			if (inventory.size() < 3) {
+				ItemStack toAdd = new ItemStack(heldItem.getItem(), 1, heldItem.getItemDamage());
+				if (heldItem.hasTagCompound()) {
+					toAdd.setTagCompound(heldItem.getTagCompound());
+				}
+				inventory.add(toAdd);
+				heldItem.stackSize--;
+				markDirty();
+				this.getWorld().notifyBlockUpdate(getPos(), state, world.getBlockState(pos), 3);
+				return true;
+			}
+		}
+		return false;
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+
 }

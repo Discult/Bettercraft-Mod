@@ -1,6 +1,7 @@
 package jordan.bettercraft.init;
 
-import jordan.bettercraft.init.blocks.Altar;
+
+import jordan.bettercraft.init.blocks.CraftingAltar;
 import jordan.bettercraft.init.blocks.furnaces.QuartzFurnace;
 import jordan.bettercraft.init.blocks.gates.NetherBrickGate;
 import jordan.bettercraft.init.blocks.ores.Bauxite;
@@ -56,7 +57,8 @@ public class BetterBlocks
 		NEATHER_BRICK_GATE = new NetherBrickGate();
 		
 		//Other
-		ALTAR = new Altar();
+		ALTAR = new CraftingAltar();
+	
 		
 		//Furnace
 		QUARTZ_FURNACE = new QuartzFurnace(false, "quartz_furnace");
