@@ -22,6 +22,11 @@ public class Reference {
 	public static final String COMMONPROXY = "jordan.bettercraft.proxy.CommonProxy";
 	public static ArrayList<ItemStack> FlightRingR = new ArrayList<ItemStack>();
 
+	
+	
+	
+	
+	
 	// utils
 	public static void InitAltarArray() {
 		FlightRingR.add(new ItemStack(Items.NETHER_STAR));

@@ -1,5 +1,6 @@
 package jordan.bettercraft.init.items.misc;
 
+import jordan.bettercraft.init.BetterTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -16,18 +17,13 @@ public class ItemFlyingRing extends Item
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public ItemFlyingRing(String name)
+	{
+		setCreativeTab(BetterTabs.tabBetterMiscellaneous);
+		setUnlocalizedName(name);
+		setRegistryName(name);;
+	}
+
 	
 	
 	

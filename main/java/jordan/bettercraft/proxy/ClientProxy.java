@@ -17,6 +17,7 @@ import jordan.bettercraft.init.tileentitys.blocks.TEQuartzFurnace;
 import jordan.bettercraft.init.tileentitys.specialrenderers.blocks.AltarTESR;
 import jordan.bettercraft.init.worldgen.BetterWorldGen;
 import jordan.bettercraft.main.Reference;
+import net.minecraftforge.client.model.b3d.B3DLoader;
 import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
@@ -32,15 +33,16 @@ public class ClientProxy extends CommonProxy
 	{
 		super.preInit(event);	
 		OBJLoader.INSTANCE.addDomain(Reference.MODID);
+		B3DLoader.INSTANCE.addDomain(Reference.MODID);
 	}
 	
 	@Override
 	public void init(FMLInitializationEvent event)
 	{
 		super.init(event);
-		BetterItems.registerRenders();
+		BetterItems.register();
 		BetterBlocks.registerRenders();
-		BetterTools.registerRenders();
+		BetterTools.register();
 		BetterWeapons.registerRenders();
 		BetterCrops.registerRenders();
 		BetterSeeds.registerRenders();

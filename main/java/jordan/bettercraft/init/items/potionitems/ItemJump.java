@@ -1,5 +1,6 @@
 package jordan.bettercraft.init.items.potionitems;
 
+import jordan.bettercraft.init.BetterTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -12,10 +13,13 @@ import net.minecraft.world.World;
 
 public class ItemJump extends Item 
 {
-	public  ItemJump()
+	public  ItemJump(String name)
 	{
 		maxStackSize = 1;
 		setMaxDamage(9);
+		setCreativeTab(BetterTabs.tabBetterMiscellaneous);
+		setUnlocalizedName(name);
+		setRegistryName(name);
 	}
 	
 	@Override

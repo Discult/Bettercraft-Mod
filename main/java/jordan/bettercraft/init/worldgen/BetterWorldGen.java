@@ -8,6 +8,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenerator;
+import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
 public class BetterWorldGen implements IWorldGenerator
@@ -35,9 +36,9 @@ public class BetterWorldGen implements IWorldGenerator
 		{
 		case 0: //OverWorld
 			
-			//this.runGenerator(this.RUBY_ORE, world, random, chunckX, chunckZ, 45, 0, 35);
-			//this.runGenerator(this.SAPPHIRE_ORE, world, random, chunckX, chunckZ, 45, 0, 35);
-			//this.runGenerator(this.COPPER_ORE, world, random, chunckX, chunckZ, 55, 0, 50);
+			this.runGenerator(this.RUBY_ORE, world, random, chunckX, chunckZ, 45, 0, 35);
+			this.runGenerator(this.SAPPHIRE_ORE, world, random, chunckX, chunckZ, 45, 0, 35);
+			this.runGenerator(this.COPPER_ORE, world, random, chunckX, chunckZ, 55, 0, 50);
 			
 			break;
 		

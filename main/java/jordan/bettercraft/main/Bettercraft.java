@@ -1,8 +1,16 @@
 package jordan.bettercraft.main;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+
 import org.apache.logging.log4j.Logger;
 
 import jordan.bettercraft.proxy.CommonProxy;
+import net.minecraft.block.Block;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -23,12 +31,17 @@ public class Bettercraft
 	
 	public static Logger logger;
 	
+	
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		logger = event.getModLog();
 		proxy.preInit(event);
 	}
+	
+
+	
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{

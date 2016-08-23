@@ -36,14 +36,14 @@ public class CommonProxy
 		BetterArmor.init();
 		BetterTools.init();
 		BetterWeapons.init();
-		TileEntitys.init();
-		Reference.InitAltarArray();
+		
 		//Block type stuff
 		BetterBlocks.init();
 		BetterBlocks.register();
 		
 		BetterCrops.init();
 		BetterCrops.register();
+		
 
 		BetterSoundEvents.registerSounds();
 		MinecraftForge.EVENT_BUS.register(new BetterEvents());

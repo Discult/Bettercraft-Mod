@@ -15,6 +15,7 @@ import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import sun.font.GraphicComponent;
 
 public class BetterTools 
 {
@@ -47,95 +48,66 @@ public class BetterTools
 	public static void init()
 	{
 		//Picks
-		RUBY_PICKAXE = registerItem(new BetterItemPickaxe(BetterToolMaterials.RUBY), "ruby_pickaxe").setUnlocalizedName("ruby_pickaxe");
-		SAPPHIRE_PICKAXE = registerItem(new BetterItemPickaxe(BetterToolMaterials.SAPPHIRE), "sapphire_pickaxe").setUnlocalizedName("sapphire_pickaxe");
-		EMERALD_PICKAXE = registerItem(new BetterItemPickaxe(BetterToolMaterials.EMERALD), "emerald_pickaxe").setUnlocalizedName("emerald_pickaxe");
-		COPPER_PICKAXE = registerItem(new BetterItemPickaxe(BetterToolMaterials.COPPER), "copper_pickaxe").setUnlocalizedName("copper_pickaxe");
+		RUBY_PICKAXE = new BetterItemPickaxe(BetterToolMaterials.RUBY, "ruby_pickaxe");
+		SAPPHIRE_PICKAXE = new BetterItemPickaxe(BetterToolMaterials.SAPPHIRE, "sapphire_pickaxe");
+		EMERALD_PICKAXE = new BetterItemPickaxe(BetterToolMaterials.EMERALD, "emerald_pickaxe");
+		COPPER_PICKAXE = new BetterItemPickaxe(BetterToolMaterials.COPPER, "copper_pickaxe");
 		
 		//Axes
-		RUBY_AXE = registerItem(new BetterItemAxe(BetterToolMaterials.RUBY), "ruby_axe").setUnlocalizedName("ruby_axe");
-		SAPPHIRE_AXE = registerItem(new BetterItemAxe(BetterToolMaterials.SAPPHIRE), "sapphire_axe").setUnlocalizedName("sapphire_axe");
-		EMERALD_AXE = registerItem(new BetterItemAxe(BetterToolMaterials.EMERALD), "emerald_axe").setUnlocalizedName("emerald_axe");
-		COPPER_AXE = registerItem(new BetterItemAxe(BetterToolMaterials.COPPER), "copper_axe").setUnlocalizedName("copper_axe");
+		RUBY_AXE = new BetterItemAxe(BetterToolMaterials.RUBY, "ruby_axe");
+		SAPPHIRE_AXE = new BetterItemAxe(BetterToolMaterials.SAPPHIRE, "sapphire_axe");
+		EMERALD_AXE = new BetterItemAxe(BetterToolMaterials.EMERALD, "emerald_axe");
+		COPPER_AXE = new BetterItemAxe(BetterToolMaterials.COPPER, "copper_axe");
 		
 		//Shovels
-		RUBY_SHOVEL = registerItem(new BetterItemShovel(BetterToolMaterials.RUBY), "ruby_shovel").setUnlocalizedName("ruby_shovel");
-		SAPPHIRE_SHOVEL = registerItem(new BetterItemShovel(BetterToolMaterials.SAPPHIRE), "sapphire_shovel").setUnlocalizedName("sapphire_shovel");
-		EMERALD_SHOVEL = registerItem(new BetterItemShovel(BetterToolMaterials.EMERALD), "emerald_shovel").setUnlocalizedName("emerald_shovel");
-		COPPER_SHOVEL = registerItem(new BetterItemShovel(BetterToolMaterials.COPPER), "copper_shovel").setUnlocalizedName("copper_shovel");
+		RUBY_SHOVEL = new BetterItemShovel(BetterToolMaterials.RUBY, "ruby_shovel");
+		SAPPHIRE_SHOVEL = new BetterItemShovel(BetterToolMaterials.SAPPHIRE, "sapphire_shovel");
+		EMERALD_SHOVEL = new BetterItemShovel(BetterToolMaterials.EMERALD, "emerald_shovel");
+		COPPER_SHOVEL = new BetterItemShovel(BetterToolMaterials.COPPER, "copper_shovel");
 		
 		//Paxels
-		WOODEN_PAXEL = registerItem(new BetterItemPaxel(ToolMaterial.WOOD), "wooden_paxel").setUnlocalizedName("wooden_paxel");
-		STONE_PAXEL = registerItem(new BetterItemPaxel(ToolMaterial.STONE), "stone_paxel").setUnlocalizedName("stone_paxel");
-		IRON_PAXEL = registerItem(new BetterItemPaxel(ToolMaterial.IRON), "iron_paxel").setUnlocalizedName("iron_paxel");
-		GOLDEN_PAXEL = registerItem(new BetterItemPaxel(ToolMaterial.GOLD), "golden_paxel").setUnlocalizedName("golden_paxel");
-		DIAMOND_PAXEL = registerItem(new BetterItemPaxel(ToolMaterial.DIAMOND), "diamond_paxel").setUnlocalizedName("diamond_paxel");
+		WOODEN_PAXEL = new BetterItemPaxel(ToolMaterial.WOOD, "wooden_paxel");
+		STONE_PAXEL = new BetterItemPaxel(ToolMaterial.STONE, "stone_paxel");
+		IRON_PAXEL = new BetterItemPaxel(ToolMaterial.IRON, "iron_paxel");
+		GOLDEN_PAXEL = new BetterItemPaxel(ToolMaterial.GOLD, "golden_paxel");
+		DIAMOND_PAXEL = new BetterItemPaxel(ToolMaterial.DIAMOND, "diamond_paxel");
 		
 	}
 	
-	public static void registerRenders()
+	public static void register()
 	{
 		//Picks
-		registerRender(RUBY_PICKAXE);
-		registerRender(SAPPHIRE_PICKAXE);
-		registerRender(EMERALD_PICKAXE);
-		registerRender(COPPER_PICKAXE);
+		registerItem(RUBY_PICKAXE);
+		registerItem(SAPPHIRE_PICKAXE);
+		registerItem(EMERALD_PICKAXE);
+		registerItem(COPPER_PICKAXE);
 		
 		//Axes
-		registerRender(RUBY_AXE);
-		registerRender(SAPPHIRE_AXE);
-		registerRender(EMERALD_AXE);
-		registerRender(COPPER_AXE);
+		registerItem(RUBY_AXE);
+		registerItem(SAPPHIRE_AXE);
+		registerItem(EMERALD_AXE);
+		registerItem(COPPER_AXE);
 		
 		//Shovels
-		registerRender(RUBY_SHOVEL);
-		registerRender(SAPPHIRE_SHOVEL);
-		registerRender(EMERALD_SHOVEL);
-		registerRender(COPPER_SHOVEL);
+		registerItem(RUBY_SHOVEL);
+		registerItem(SAPPHIRE_SHOVEL);
+		registerItem(EMERALD_SHOVEL);
+		registerItem(COPPER_SHOVEL);
 		
 		//Paxels
-		registerRender(WOODEN_PAXEL);
-		registerRender(STONE_PAXEL);
-		registerRender(IRON_PAXEL);
-		registerRender(GOLDEN_PAXEL);
-		registerRender(DIAMOND_PAXEL);
+		registerItem(WOODEN_PAXEL);
+		registerItem(STONE_PAXEL);
+		registerItem(IRON_PAXEL);
+		registerItem(GOLDEN_PAXEL);
+		registerItem(DIAMOND_PAXEL);
+		
 	}
 	
-	public static void registerRender(Item item)
+	public static void registerItem(Item item)
 	{
+		GameRegistry.register(item);
+		
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
 		.register(item, 0, new ModelResourceLocation(Reference.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//registerItem Start\\
-	public static Item registerItem(Item item, String name)
-	{
-		return registerItem(item, name, null);
-	}
-	
-	public static Item registerItem(Item item, String name, CreativeTabs tab)
-	{
-		GameRegistry.register(item, new ResourceLocation(Reference.MODID, name));
-		return item;
-	}
-	//registerItem End\\
 }

@@ -5,6 +5,7 @@ import java.util.Random;
 import javax.annotation.Nullable;
 
 import jordan.bettercraft.init.BetterBlocks;
+import jordan.bettercraft.init.BetterTabs;
 import jordan.bettercraft.init.tileentitys.blocks.TEQuartzFurnace;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -49,6 +50,7 @@ public class QuartzFurnace extends BlockContainer
 		super(Material.ROCK);
 		setRegistryName(name);
 		setUnlocalizedName(name);
+		this.setCreativeTab(BetterTabs.tabBetterDecorationBlocks);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		this.isBurning = isBurning;
 	}

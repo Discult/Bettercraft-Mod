@@ -25,9 +25,11 @@ public class BetterItemPaxel extends ItemTool
 	private static final float[] ATTACK_DAMAGES = new float[] {6.0F, 8.0F, 8.0F, 8.0F, 6.0F};
 	private static final float[] ATTACK_SPEEDS = new float[] { -3.2F, -3.2F, -3.1F, -3.0F, -3.0F};
 	
-	public BetterItemPaxel(Item.ToolMaterial material)
+	public BetterItemPaxel(Item.ToolMaterial material, String name)
 	{
 		super(material, EFFECTIVE_ON);
+		setUnlocalizedName(name);
+		setRegistryName(name);
 		this.damageVsEntity = ATTACK_DAMAGES[material.ordinal()];	
 		this.attackSpeed = ATTACK_SPEEDS[material.ordinal()];
 		this.setCreativeTab(CreativeTabs.TOOLS);

@@ -1,6 +1,6 @@
 {
 "mummy.ambient": {
-	"category": "record",
+	"category": "master",
 	"sounds": [
 	{
 		"name": "bettercraft:/mummy/mummy_ambient","stream":false

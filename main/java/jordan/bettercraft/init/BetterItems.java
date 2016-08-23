@@ -1,7 +1,7 @@
 package jordan.bettercraft.init;
 
-import com.sun.xml.internal.ws.assembler.dev.ServerTubelineAssemblyContext;
-
+import jordan.bettercraft.init.items.MaterialItems;
+import jordan.bettercraft.init.items.MiscItems;
 import jordan.bettercraft.init.items.misc.ItemFlyingRing;
 import jordan.bettercraft.init.items.potionitems.ItemJump;
 import jordan.bettercraft.init.items.potionitems.ItemSwift;
@@ -31,83 +31,57 @@ public class BetterItems
 	public static Item CATALYST;
 	public static Item FLYING_RING;
 	public static Item RING;
+	public static Item RABBIT_RING;
 	
 	public static void init()
 	{
 		//Materials
-		RUBY = registerItem(new Item(), "ruby").setUnlocalizedName("ruby").setCreativeTab(BetterTabs.tabBetterMaterials);
-		SAPPHIRE = registerItem(new Item(), "sapphire").setUnlocalizedName("sapphire").setCreativeTab(BetterTabs.tabBetterMaterials);
-		COPPER_INGOT = registerItem(new Item(), "copper_ingot").setUnlocalizedName("copper_ingot").setCreativeTab(BetterTabs.tabBetterMaterials);
-		DRAGON_SCALE = registerItem(new Item(), "dragon_scale").setUnlocalizedName("dragon_scale").setCreativeTab(BetterTabs.tabBetterMaterials);
-		STEEL_INGOT = registerItem(new Item(), "steel_ingot").setUnlocalizedName("steel_ingot").setCreativeTab(BetterTabs.tabBetterMaterials);
-		SALT = registerItem(new Item(), "salt").setUnlocalizedName("salt").setCreativeTab(BetterTabs.tabBetterMaterials);
-		ALUMINUM_INGOT = registerItem(new Item(), "aluminum_ingot").setUnlocalizedName("aluminum_ingot").setCreativeTab(BetterTabs.tabBetterMaterials);
+		RUBY = new MaterialItems("ruby");
+		SAPPHIRE = new MaterialItems("sapphire");
+		COPPER_INGOT = new MaterialItems("copper_ingot");
+		DRAGON_SCALE = new MaterialItems("dragon_scale");
+		STEEL_INGOT = new MaterialItems("steel_ingot");
+		SALT = new MaterialItems("salt");
+		ALUMINUM_INGOT = new MaterialItems("aluminum_ingot");
 		
 		//Miscellaneous
-		SWIFT_ITEM = registerItem(new ItemSwift(), "swift_item").setUnlocalizedName("swift_item").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
-		JUMP_ITEM = registerItem(new ItemJump(), "jump_item").setUnlocalizedName("jump_item").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
-		CATALYST = registerItem(new Item(), "catalyst").setUnlocalizedName("catalyst").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
-		FLYING_RING = registerItem(new ItemFlyingRing(), "flying_ring").setUnlocalizedName("flying_ring").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
-		RING = registerItem(new Item(), "ring").setUnlocalizedName("ring").setCreativeTab(BetterTabs.tabBetterMiscellaneous);
+		SWIFT_ITEM = new ItemSwift("swift_item");
+		JUMP_ITEM = new ItemJump("jump_item");
+		CATALYST = new MiscItems("catalyst");
+		FLYING_RING = new ItemFlyingRing("flying_ring");
+		RING = new MiscItems("ring");
+		
 	
 		
 	}
-	public static void registerRenders()
+	
+
+	
+	public static void register()
 	{
 		//Materials
-		registerRender(RUBY);
-		registerRender(SAPPHIRE);
-		registerRender(COPPER_INGOT);
-		registerRender(DRAGON_SCALE);
-		registerRender(STEEL_INGOT);
-		registerRender(SALT);
-		registerRender(ALUMINUM_INGOT);
+		registerItem(RUBY);
+		registerItem(SAPPHIRE);
+		registerItem(COPPER_INGOT);
+		registerItem(DRAGON_SCALE);
+		registerItem(STEEL_INGOT);
+		registerItem(SALT);
+		registerItem(ALUMINUM_INGOT);
 		
 		//Miscellaneous
-		registerRender(SWIFT_ITEM);
-		registerRender(JUMP_ITEM);
-		registerRender(CATALYST);
-		registerRender(FLYING_RING);
-		registerRender(RING);
+		registerItem(SWIFT_ITEM);
+		registerItem(JUMP_ITEM);
+		registerItem(CATALYST);
+		registerItem(FLYING_RING);
+		registerItem(RING);
 	
 	}
 	
-	public static void registerRender(Item item)
+	public static void registerItem(Item item)
 	{
+		GameRegistry.register(item);
+		
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
 		.register(item, 0, new ModelResourceLocation(Reference.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//registerItem Start\\
-	public static Item registerItem(Item item, String name)
-	{
-		return registerItem(item, name, null);
-	}
-	
-	public static Item registerItem(Item item, String name, CreativeTabs tab)
-	{
-		GameRegistry.register(item, new ResourceLocation(Reference.MODID, name));
-		return item;
-	}
-	//registerItem End\\
 }

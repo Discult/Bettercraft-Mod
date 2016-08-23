@@ -2,14 +2,17 @@ package jordan.bettercraft.init;
 
 
 import jordan.bettercraft.init.blocks.CraftingAltar;
+import jordan.bettercraft.init.blocks.decoration.CookieJar;
+import jordan.bettercraft.init.blocks.decoration.chairs.BlockChair;
 import jordan.bettercraft.init.blocks.furnaces.QuartzFurnace;
-import jordan.bettercraft.init.blocks.gates.NetherBrickGate;
 import jordan.bettercraft.init.blocks.ores.Bauxite;
 import jordan.bettercraft.init.blocks.ores.CopperOre;
 import jordan.bettercraft.init.blocks.ores.RubyOre;
 import jordan.bettercraft.init.blocks.ores.SapphireOre;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStone.EnumType;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
@@ -32,7 +35,6 @@ public class BetterBlocks
 	//Stairs
 	
 	//Fence Gates
-	public static Block NEATHER_BRICK_GATE;
 		
 	//Other
 	public static Block ALTAR;
@@ -40,6 +42,16 @@ public class BetterBlocks
 	//Furnace
 	public static Block QUARTZ_FURNACE;
 	public static Block LIT_QUARTZ_FURNACE;
+	
+	//CraftingTables
+	public static Block ADVANCED_CRAFTING_TABLE;
+	
+	//Chairs
+	public static Block WOODEN_CHAIR;
+	public static Block SPRUCE_WOODEN_CHAIR;
+	
+	//DecoBlocks
+	public static Block COOKIE_JAR;
 	
 	public static void init()
 	{
@@ -54,7 +66,6 @@ public class BetterBlocks
 		//Stairs
 		
 		//FenceGates
-		NEATHER_BRICK_GATE = new NetherBrickGate();
 		
 		//Other
 		ALTAR = new CraftingAltar();
@@ -63,6 +74,16 @@ public class BetterBlocks
 		//Furnace
 		QUARTZ_FURNACE = new QuartzFurnace(false, "quartz_furnace");
 		LIT_QUARTZ_FURNACE = new QuartzFurnace(true, "lit_quartz_furnace");
+		
+		//CraftingTables
+		
+		//Chairs
+		WOODEN_CHAIR = new BlockChair(Material.WOOD, SoundType.WOOD, "wooden_chair");
+		
+		
+		//DecoBlocks
+		COOKIE_JAR = new CookieJar();
+		
 	}
 	
 	public static void register()
@@ -78,7 +99,6 @@ public class BetterBlocks
 		//Stairs
 		
 		//FenceGates
-		registerBlock(NEATHER_BRICK_GATE);
 		
 		//Other
 		registerBlock(ALTAR);
@@ -86,6 +106,14 @@ public class BetterBlocks
 		//Furnace
 		registerBlock(QUARTZ_FURNACE);
 		registerBlock(LIT_QUARTZ_FURNACE);
+		
+		//CraftingTables
+		
+		//Chairs
+		registerBlock(WOODEN_CHAIR);
+		
+		//DecoBlocks
+		registerBlock(COOKIE_JAR);
 	}
 	
 	private static void registerBlock(Block block)
@@ -109,7 +137,6 @@ public class BetterBlocks
 		//Stairs
 		
 		//FenceGate
-		registerRender(NEATHER_BRICK_GATE);
 		
 		//Other
 		registerRender(ALTAR);
@@ -117,6 +144,14 @@ public class BetterBlocks
 		//Furnace
 		registerRender(QUARTZ_FURNACE);
 		registerRender(LIT_QUARTZ_FURNACE);
+		
+		//CraftingTables
+		
+		//Chairs
+		registerRender(WOODEN_CHAIR);
+		
+		//DecoBlocks
+		registerRender(COOKIE_JAR);
 	}
 	
 	public static void registerRender(Block block)

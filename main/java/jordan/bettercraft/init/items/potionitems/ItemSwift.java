@@ -1,6 +1,6 @@
 package jordan.bettercraft.init.items.potionitems;
 
-import net.minecraft.block.Block;
+import jordan.bettercraft.init.BetterTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -10,14 +10,16 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 
 public class ItemSwift extends Item 
 {
-	public ItemSwift()
+	public ItemSwift(String name)
 	{
 		maxStackSize = 1;
 		setMaxDamage(9);
+		setCreativeTab(BetterTabs.tabBetterMiscellaneous);
+		setUnlocalizedName(name);
+		setRegistryName(name);
 	}
 	
 	@Override
