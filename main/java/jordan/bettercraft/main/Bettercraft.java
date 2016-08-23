@@ -6,6 +6,7 @@ import java.util.HashSet;
 
 import org.apache.logging.log4j.Logger;
 
+import jordan.bettercraft.init.blocks.entitys.EntitySittableBlock;
 import jordan.bettercraft.proxy.CommonProxy;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
@@ -18,15 +19,16 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 
-@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions="[1.9.4]")
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions="[1.10]")
 public class Bettercraft 
 {
 	
 	@SidedProxy(clientSide = Reference.CLIENTPROXY, serverSide = Reference.COMMONPROXY)
 	public static CommonProxy proxy;
 	
-	@Instance
+	@Instance(Reference.MODID)
 	public static Bettercraft instance;
 	
 	public static Logger logger;
@@ -51,5 +53,6 @@ public class Bettercraft
 	public void postInit(FMLPostInitializationEvent event)
 	{
 		proxy.postInit(event);
+		
 	}
 }

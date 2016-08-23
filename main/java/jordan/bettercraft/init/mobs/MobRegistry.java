@@ -1,5 +1,6 @@
 package jordan.bettercraft.init.mobs;
 
+import jordan.bettercraft.init.blocks.entitys.EntitySittableBlock;
 import jordan.bettercraft.init.mobs.entitys.EntityBoar;
 import jordan.bettercraft.init.mobs.entitys.EntityMummy;
 import jordan.bettercraft.init.mobs.entitys.EntityZebra;
@@ -12,6 +13,7 @@ import jordan.bettercraft.main.Bettercraft;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraftforge.common.BiomeDictionary;import net.minecraftforge.common.BiomeDictionary.Type;
+import net.minecraftforge.event.entity.EntityMountEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 

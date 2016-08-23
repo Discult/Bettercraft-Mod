@@ -13,6 +13,7 @@ import jordan.bettercraft.init.BetterWeapons;
 import jordan.bettercraft.init.BetterEvents;
 import jordan.bettercraft.init.MobDropsHandler;
 import jordan.bettercraft.init.TileEntitys;
+import jordan.bettercraft.init.blocks.entitys.EntitySittableBlock;
 import jordan.bettercraft.init.mobs.MobRegistry;
 import jordan.bettercraft.init.worldgen.BetterWorldGen;
 import jordan.bettercraft.main.Reference;
@@ -23,6 +24,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class CommonProxy 
