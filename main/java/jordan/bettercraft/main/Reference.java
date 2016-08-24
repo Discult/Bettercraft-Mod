@@ -20,6 +20,8 @@ public class Reference {
 
 	public static final String CLIENTPROXY = "jordan.bettercraft.proxy.ClientProxy";
 	public static final String COMMONPROXY = "jordan.bettercraft.proxy.CommonProxy";
+	
+	
 	public static ArrayList<ItemStack> FlightRingR = new ArrayList<ItemStack>();
 
 	

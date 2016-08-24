@@ -25,7 +25,7 @@ public class CraftingAltar extends TEBlockBase implements ITileEntityProvider {
 	public CraftingAltar(){
 		super(Material.ROCK);
 		setUnlocalizedName("altar");
-		setRegistryName("CraftingAltar");
+		setRegistryName("altar");
 		setCreativeTab(BetterTabs.tabBetterMiscellaneous);
 		setHardness(1.0f);
 	}

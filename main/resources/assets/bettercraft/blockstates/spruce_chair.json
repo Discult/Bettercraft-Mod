@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "bettercraft:spruce_chair", "y": 270 },
+        "facing=south": { "model": "bettercraft:spruce_chair", "y": 90  },
+        "facing=east":  { "model": "bettercraft:spruce_chair"           },
+        "facing=west":  { "model": "bettercraft:spruce_chair", "y": 180 }
+    }
+}

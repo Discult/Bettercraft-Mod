@@ -16,10 +16,16 @@ tile.bauxite.name=Bauxite
 
 //Special Blocks
 tile.altar.name=Altar
+tile.cookie_jar.name=Cookie Jar
 
 //Furnaces
-tile.QUARTZ_FURNACE.name=Quartz Furnace
-tile.LIT_QUARTZ_FURNACE.name=Lit Quartz Furnace
+tile.quartz_furnace.name=Quartz Furnace
+tile.lit_quartz_furnace.name=Lit Quartz Furnace
+
+//Chairs
+tile.oak_chair.name=Oak Chair
+tile.spruce_chair.name=Spruce Chair
+tile.birch_chair.name=Birch Chair
 
 //CreativeTabs
 itemGroup.BetterBuildingBlocks=Bettercraft Building Blocks

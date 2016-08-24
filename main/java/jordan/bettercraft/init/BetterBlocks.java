@@ -25,12 +25,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class BetterBlocks 
 {
 	//Ores
-	public static Block RUBY_ORE;
-	public static Block SAPPHIRE_ORE;
-	public static Block COPPER_ORE;
-	public static Block ALLUMINUM_ORE;
+	public static Block RUBY_ORE, SAPPHIRE_ORE, COPPER_ORE, ALLUMINUM_ORE;
+	
 	//Normal Blocks
-		
 		
 	//Stairs
 	
@@ -40,15 +37,14 @@ public class BetterBlocks
 	public static Block ALTAR;
 	
 	//Furnace
-	public static Block QUARTZ_FURNACE;
-	public static Block LIT_QUARTZ_FURNACE;
+	public static Block QUARTZ_FURNACE, LIT_QUARTZ_FURNACE;
 	
 	//CraftingTables
 	public static Block ADVANCED_CRAFTING_TABLE;
 	
 	//Chairs
-	public static Block WOODEN_CHAIR;
-	public static Block SPRUCE_WOODEN_CHAIR;
+	public static Block OAK_CHAIR, SPRUCE_CHAIR, BIRCH_CHAIR;
+	
 	
 	//DecoBlocks
 	public static Block COOKIE_JAR;
@@ -78,7 +74,9 @@ public class BetterBlocks
 		//CraftingTables
 		
 		//Chairs
-		WOODEN_CHAIR = new BlockChair(Material.WOOD, SoundType.WOOD, "wooden_chair");
+		OAK_CHAIR = new BlockChair(Material.WOOD, SoundType.WOOD, "oak_chair");
+		SPRUCE_CHAIR = new BlockChair(Material.WOOD, SoundType.WOOD, "spruce_chair");
+		BIRCH_CHAIR = new BlockChair(Material.WOOD, SoundType.WOOD, "birch_chair");
 		
 		
 		//DecoBlocks
@@ -110,7 +108,9 @@ public class BetterBlocks
 		//CraftingTables
 		
 		//Chairs
-		registerBlock(WOODEN_CHAIR);
+		registerBlock(OAK_CHAIR);
+		registerBlock(SPRUCE_CHAIR);
+		registerBlock(BIRCH_CHAIR);
 		
 		//DecoBlocks
 		registerBlock(COOKIE_JAR);
@@ -148,7 +148,9 @@ public class BetterBlocks
 		//CraftingTables
 		
 		//Chairs
-		registerRender(WOODEN_CHAIR);
+		registerRender(OAK_CHAIR);
+		registerRender(SPRUCE_CHAIR);
+		registerRender(BIRCH_CHAIR);
 		
 		//DecoBlocks
 		registerRender(COOKIE_JAR);

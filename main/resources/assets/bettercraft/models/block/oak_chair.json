@@ -1,0 +1,6 @@
+{
+    "parent": "bettercraft:block/chair",
+    "textures": {
+        "1": "blocks/planks_oak"
+    }
+}

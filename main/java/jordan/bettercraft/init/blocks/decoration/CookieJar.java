@@ -9,8 +9,8 @@ public class CookieJar extends Block
 	public CookieJar() 
 	{
 		super(Material.GLASS);
-		setUnlocalizedName("glass_jar");
-		setRegistryName("glass_jar");
+		setUnlocalizedName("cookie_jar");
+		setRegistryName("cookie_jar");
 	}
 	
 }
