@@ -37,6 +37,7 @@ public class ClientProxy extends CommonProxy
 		super.preInit(event);	
 		OBJLoader.INSTANCE.addDomain(Reference.MODID);
 		B3DLoader.INSTANCE.addDomain(Reference.MODID);
+	
 	}
 	
 	@Override
