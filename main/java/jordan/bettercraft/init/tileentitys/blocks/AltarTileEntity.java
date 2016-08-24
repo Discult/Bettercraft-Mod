@@ -103,15 +103,17 @@ public class AltarTileEntity extends TEBase implements ITickable {
 
 	@Override
 	public void update() {
-		System.out.println("Worl");
-		if (Reference.itemListsMatch(Reference.FlightRingR,
-				((AltarTileEntity) this.getWorld().getTileEntity(pos)).inventory)) {
-			System.out.print("Works?");
-			this.inventory.clear();
-			this.inventory.add(new ItemStack(BetterItems.FLYING_RING));
-			this.markDirty();
-		}
-
+	if(Reference.InventoryContains(inventory, new ItemStack(BetterItems.RING), new ItemStack(Items.ELYTRA))){
+		this.inventory.clear();
+		this.inventory.add(new ItemStack(BetterItems.FLYING_RING));
+		this.markDirty();
+	}
+	
+	
+	
+	
+	
+	
 	}
 
 }

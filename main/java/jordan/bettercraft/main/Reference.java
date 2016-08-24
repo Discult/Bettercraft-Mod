@@ -22,11 +22,6 @@ public class Reference {
 	public static final String COMMONPROXY = "jordan.bettercraft.proxy.CommonProxy";
 	public static ArrayList<ItemStack> FlightRingR = new ArrayList<ItemStack>();
 
-	
-	
-	
-	
-	
 	// utils
 	public static void InitAltarArray() {
 		FlightRingR.add(new ItemStack(Items.NETHER_STAR));
@@ -48,16 +43,28 @@ public class Reference {
 		return new BlockPos(x, y, z);
 	}
 
-	public static boolean itemListsMatch(List<ItemStack> i1, List<ItemStack> i2) {
-		if (!i2.isEmpty()) {
-			System.out.println("Worl");
-			if (i1.get(0).equals(i2.get(0)) && i1.get(2).equals(i2.get(2))) {
-				System.out.println("Worl");
-				return true;
+	public static boolean InventoryContains(ArrayList<ItemStack> inv, ItemStack item1, ItemStack item2) {
+		boolean item1inslot1 = false;
+		boolean item1inslot2 = false;
+		boolean item2inslot1 = false;
+		boolean item2inslot2 = false;
 
-			}
+		if (inv.get(0) == item1) {
+			item1inslot1 = true;
+		} else if (inv.get(0) == item2) {
+			item2inslot1 = true;
+		} else if (inv.get(1) == item2) {
+			item2inslot2 = true;
+		} else if (inv.get(1) == item1) {
+			item1inslot2 = true;
+		}
+		if (item1inslot1 && item2inslot1) {
+			return true;
+		} else if (item2inslot2 && item1inslot2) {
+			return true;
+		} else {
+			return false;
 		}
 
-		return false;
 	}
 }
