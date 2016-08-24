@@ -19,7 +19,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 
-public class AltarTileEntity extends TEBase {
+public class AltarTileEntity extends TEBase implements ITickable {
 	public ArrayList<ItemStack> inventory = new ArrayList<ItemStack>();
 	Random random = new Random();
 
@@ -30,7 +30,6 @@ public class AltarTileEntity extends TEBase {
 	@Override
 	public void readFromNBT(NBTTagCompound tag) {
 		super.readFromNBT(tag);
-		inventory = new ArrayList<ItemStack>();
 		if (tag.hasKey("inventory")) {
 			NBTTagList list = tag.getTagList("inventory", Constants.NBT.TAG_COMPOUND);
 			for (int i = 0; i < list.tagCount(); i++) {
@@ -70,19 +69,6 @@ public class AltarTileEntity extends TEBase {
 
 	public boolean activate(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand,
 			ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-		
-		if (player.isSneaking()){
-			System.out.println("This works");
-		
-				System.out.println("This works");
-				world.spawnEntityInWorld(new EntityItem(world, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5,
-						new ItemStack(BetterItems.FLYING_RING)));
-				System.out.println("This works");
-				inventory.clear();
-				System.out.println("This works");
-				return true;
-			}
-		
 		if (heldItem == null && !player.isSneaking()) {
 			if (inventory.size() > 0) {
 				if (!world.isRemote) {
@@ -110,15 +96,22 @@ public class AltarTileEntity extends TEBase {
 				return true;
 			}
 		}
+
 		return false;
-	
-	
-	
-	
-	
-	
-	
-	
+
+	}
+
+	@Override
+	public void update() {
+		System.out.println("Worl");
+		if (Reference.itemListsMatch(Reference.FlightRingR,
+				((AltarTileEntity) this.getWorld().getTileEntity(pos)).inventory)) {
+			System.out.print("Works?");
+			this.inventory.clear();
+			this.inventory.add(new ItemStack(BetterItems.FLYING_RING));
+			this.markDirty();
+		}
+
 	}
 
 }

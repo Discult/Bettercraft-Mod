@@ -48,5 +48,16 @@ public class Reference {
 		return new BlockPos(x, y, z);
 	}
 
+	public static boolean itemListsMatch(List<ItemStack> i1, List<ItemStack> i2) {
+		if (!i2.isEmpty()) {
+			System.out.println("Worl");
+			if (i1.get(0).equals(i2.get(0)) && i1.get(2).equals(i2.get(2))) {
+				System.out.println("Worl");
+				return true;
 
+			}
+		}
+
+		return false;
+	}
 }
