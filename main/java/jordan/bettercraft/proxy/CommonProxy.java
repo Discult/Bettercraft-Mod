@@ -12,7 +12,6 @@ import jordan.bettercraft.init.BetterTools;
 import jordan.bettercraft.init.BetterWeapons;
 import jordan.bettercraft.init.BetterEvents;
 import jordan.bettercraft.init.MobDropsHandler;
-import jordan.bettercraft.init.TileEntitys;
 import jordan.bettercraft.init.blocks.entitys.EntitySittableBlock;
 import jordan.bettercraft.init.mobs.MobRegistry;
 import jordan.bettercraft.init.worldgen.BetterWorldGen;

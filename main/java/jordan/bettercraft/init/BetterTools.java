@@ -15,7 +15,7 @@ import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import sun.font.GraphicComponent;
+
 
 public class BetterTools 
 {

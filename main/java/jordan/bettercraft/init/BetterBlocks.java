@@ -1,7 +1,7 @@
 package jordan.bettercraft.init;
 
 
-import jordan.bettercraft.init.blocks.CraftingAltar;
+
 import jordan.bettercraft.init.blocks.decoration.CookieJar;
 import jordan.bettercraft.init.blocks.decoration.chairs.BlockChair;
 import jordan.bettercraft.init.blocks.furnaces.QuartzFurnace;
@@ -64,8 +64,6 @@ public class BetterBlocks
 		//FenceGates
 		
 		//Other
-		ALTAR = new CraftingAltar();
-	
 		
 		//Furnace
 		QUARTZ_FURNACE = new QuartzFurnace(false, "quartz_furnace");
@@ -99,7 +97,7 @@ public class BetterBlocks
 		//FenceGates
 		
 		//Other
-		registerBlock(ALTAR);
+	
 		
 		//Furnace
 		registerBlock(QUARTZ_FURNACE);
@@ -139,7 +137,7 @@ public class BetterBlocks
 		//FenceGate
 		
 		//Other
-		registerRender(ALTAR);
+		
 		
 		//Furnace
 		registerRender(QUARTZ_FURNACE);

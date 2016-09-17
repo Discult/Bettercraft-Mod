@@ -7,22 +7,17 @@ import jordan.bettercraft.init.BetterFoods;
 import jordan.bettercraft.init.BetterItems;
 import jordan.bettercraft.init.BetterRecipes;
 import jordan.bettercraft.init.BetterSeeds;
-import jordan.bettercraft.init.BetterSoundEvents;
 import jordan.bettercraft.init.BetterTools;
 import jordan.bettercraft.init.BetterWeapons;
 import jordan.bettercraft.init.MobDropsHandler;
 import jordan.bettercraft.init.blocks.entitys.EntitySittableBlock;
 import jordan.bettercraft.init.mobs.MobRegistry;
-import jordan.bettercraft.init.tileentitys.blocks.AltarTileEntity;
-import jordan.bettercraft.init.tileentitys.blocks.TEQuartzFurnace;
-import jordan.bettercraft.init.tileentitys.specialrenderers.blocks.AltarTESR;
 import jordan.bettercraft.init.worldgen.BetterWorldGen;
 import jordan.bettercraft.main.Bettercraft;
 import jordan.bettercraft.main.Reference;
 import net.minecraftforge.client.model.b3d.B3DLoader;
 import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -56,11 +51,7 @@ public class ClientProxy extends CommonProxy
 		BetterRecipes.register();
 		
 		MobRegistry.register();
-		
-		ClientRegistry.bindTileEntitySpecialRenderer(AltarTileEntity.class, new AltarTESR());
-		
-		GameRegistry.registerTileEntity(TEQuartzFurnace.class, "QF");
-		
+	
 		EntityRegistry.registerModEntity(EntitySittableBlock.class, "mountable_block", 500, Bettercraft.instance, 80, 1, false);
 		
 		GameRegistry.registerWorldGenerator(new BetterWorldGen(), 0);
