@@ -1,6 +1,7 @@
 package jordan.bettercraft.init.Gui;
 
 import jline.internal.Nullable;
+import jordan.bettercraft.init.BetterItems;
 import jordan.bettercraft.init.tileentitys.blocks.AltarBlockInventory;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
@@ -25,6 +26,10 @@ public class AltarContainer extends Container {
         addPlayerSlots(playerInventory);
     }
 
+ 
+    
+    
+    
     private void addPlayerSlots(IInventory playerInventory) {
         // Slots for the main inventory
         for (int row = 0; row < 3; ++row) {
@@ -85,6 +90,21 @@ public class AltarContainer extends Container {
         return itemstack;
     }
 
+ 			
+ 	  
+    	
+ 	   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     @Override
     public boolean canInteractWith(EntityPlayer playerIn) {
         return te.canInteractWith(playerIn);
