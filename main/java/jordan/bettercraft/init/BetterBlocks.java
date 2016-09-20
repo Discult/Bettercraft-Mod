@@ -4,6 +4,7 @@ package jordan.bettercraft.init;
 
 import jordan.bettercraft.init.blocks.decoration.CookieJar;
 import jordan.bettercraft.init.blocks.decoration.chairs.BlockChair;
+import jordan.bettercraft.init.blocks.furnaces.AltarBlock;
 import jordan.bettercraft.init.blocks.furnaces.QuartzFurnace;
 import jordan.bettercraft.init.blocks.ores.Bauxite;
 import jordan.bettercraft.init.blocks.ores.CopperOre;
@@ -64,7 +65,7 @@ public class BetterBlocks
 		//FenceGates
 		
 		//Other
-		
+		ALTAR = new AltarBlock("AltarBlock");
 		//Furnace
 		QUARTZ_FURNACE = new QuartzFurnace(false, "quartz_furnace");
 		LIT_QUARTZ_FURNACE = new QuartzFurnace(true, "lit_quartz_furnace");
@@ -97,7 +98,7 @@ public class BetterBlocks
 		//FenceGates
 		
 		//Other
-	
+		registerBlock(ALTAR);
 		
 		//Furnace
 		registerBlock(QUARTZ_FURNACE);
@@ -137,7 +138,7 @@ public class BetterBlocks
 		//FenceGate
 		
 		//Other
-		
+		registerRender(ALTAR);
 		
 		//Furnace
 		registerRender(QUARTZ_FURNACE);

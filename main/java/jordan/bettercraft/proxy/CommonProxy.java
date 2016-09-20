@@ -15,6 +15,7 @@ import jordan.bettercraft.init.MobDropsHandler;
 import jordan.bettercraft.init.blocks.entitys.EntitySittableBlock;
 import jordan.bettercraft.init.mobs.MobRegistry;
 import jordan.bettercraft.init.worldgen.BetterWorldGen;
+import jordan.bettercraft.main.Bettercraft;
 import jordan.bettercraft.main.Reference;
 import net.minecraft.item.Item;
 import net.minecraft.world.gen.structure.StructureStrongholdPieces.ChestCorridor;
@@ -23,6 +24,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -56,7 +58,7 @@ public class CommonProxy
 	
 	public void init(FMLInitializationEvent event)
 	{
-		
+		NetworkRegistry.INSTANCE.registerGuiHandler(Bettercraft.instance, new GUIProxy());
 	}
 	
 	public void postInit(FMLPostInitializationEvent event)
